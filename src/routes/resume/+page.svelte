@@ -42,7 +42,9 @@
 					</div>
 
 					<div class="flex flex-row m-4 mr-6 justify-end">
-						<div>https://www.linkedin.com/in/prokawsar/</div>
+						<a href="https://www.linkedin.com/in/prokawsar/" target="_blank"
+							>https://www.linkedin.com/in/prokawsar/</a
+						>
 						<!-- TODOD: Icon here -->
 					</div>
 				</div>
@@ -74,10 +76,10 @@
 						<h1 class="uppercase text-xl font-semibold tracking-[.25rem]">Profile</h1>
 
 						<p class="mt-3 ml-6 text-justify">
-							Recent bachelor's degree recipient with a background in web design and development.
-							W3C web developer certification. Over 3 years of experience working on personal blogs,
-							taking one from 1,000 monthly visitors to 50,000 visitors per month in just 1 year.
-							Seeking to become the next front end developer for Jameson Communications.
+							I have 4 years working experience in Svelte from its version 2. Have experience in
+							building component in both version. I have worked on large scale project built with
+							Sveltejs, bulma, bootstrap and other related technologies. Build admin dashboard with
+							various works flow and customer relation management system.
 						</p>
 					</div>
 
