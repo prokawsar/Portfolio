@@ -3,7 +3,7 @@
 
 	export let fill: string = '',
 		className: string = '', // default 20px
-		size: any = '',
+		size: any = 'sm',
 		icon: string;
 	const _source = './icons/';
 
@@ -33,5 +33,4 @@
 	class={className}
 	{...$$restProps}
 />
-
 <!-- <img alt="" class="{className}" src={`${_source}${icon}.svg`} {...$$restProps} /> -->
