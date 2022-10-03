@@ -10,7 +10,7 @@
 			<div
 				class="bg-gray-300 w-6/12 mx-auto border-blue-300 h-16 z-20 flex justify-center items-center"
 			>
-				<h2 class="font-semibold text-3xl">Kawsar Ahmed</h2>
+				<h2 class="font-semibold text-3xl uppercase">Kawsar Ahmed</h2>
 			</div>
 			<div class="h-16 bg-blue-500 -mt-3 z-10 relative">
 				<h2 class="text-2xl text-white text-center inset-x-0 bottom-0 absolute align-baseline">
