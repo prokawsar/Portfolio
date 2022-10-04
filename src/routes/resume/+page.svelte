@@ -3,7 +3,7 @@
 </script>
 
 <div class="container mx-auto ">
-	<div class="w-11/12 mx-auto bg-slate-50 shadow-xl">
+	<div class="w-11/12 mx-auto bg-slate-50 shadow-xl font-light font-roboto">
 		<!-- full width designation -->
 		<div class="static flex flex-col">
 			<!-- name part -->

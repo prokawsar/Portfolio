@@ -6,6 +6,9 @@ module.exports = {
 			scale: {
 				25: '.25'
 			}
+		},
+		fontFamily: {
+			roboto: ['Roboto', 'sans-serif']
 		}
 	},
 	plugins: []
