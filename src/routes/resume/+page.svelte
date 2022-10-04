@@ -43,9 +43,14 @@
 						<!-- TODOD: Icon here -->
 					</div>
 
-					<div class="flex flex-row m-4 mr-6 md:justify-end">
-						<a href="https://www.linkedin.com/in/prokawsar/" target="_blank"
-							>https://www.linkedin.com/in/prokawsar/</a
+					<div class="flex flex-col m-4 mr-6">
+						<a
+							class="flex md:justify-end"
+							href="https://www.linkedin.com/in/prokawsar/"
+							target="_blank">https://www.linkedin.com/in/prokawsar/</a
+						>
+						<a class="flex md:justify-end" href="https://www.github.com/prokawsar/" target="_blank"
+							>https://www.github.com/prokawsar/</a
 						>
 						<!-- TODOD: Icon here -->
 					</div>
