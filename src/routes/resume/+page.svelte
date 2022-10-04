@@ -1,9 +1,10 @@
 <script lang="ts">
 	import SvgIcon from '../../components/SvgIcon.svelte';
+	import SkillBar from '../../components/SkillBar.svelte';
 </script>
 
 <div class="container mx-auto ">
-	<div class="w-11/12 mx-auto bg-slate-50 shadow-xl font-light font-roboto">
+	<div class="w-11/12 mx-auto bg-slate-50 shadow-xl font-light font-roboto mb-4">
 		<!-- full width designation -->
 		<div class="static flex flex-col">
 			<!-- name part -->
@@ -70,8 +71,18 @@
 				</div>
 				<!-- key skills -->
 				<div class="mr-3 mt-3 flex flex-col">
-					<div class="flex justify-end">
-						<h1 class="uppercase text-xl font-semibold tracking-[.25rem]">Key Skills</h1>
+					<h1 class="uppercase flex md:justify-end text-xl font-semibold tracking-[.25rem]">
+						Key Skills
+					</h1>
+					<div class="flex flex-col m-3 md:m-5">
+						<SkillBar align="right" skill="Svelte" skillExpertise={80} />
+						<SkillBar align="right" skill="SvelteKit" skillExpertise={60} />
+						<SkillBar align="right" skill="Bootstrap 5" skillExpertise={85} />
+						<SkillBar align="right" skill="Tailwind" skillExpertise={60} />
+						<SkillBar align="right" skill="JavaScript" skillExpertise={80} />
+						<SkillBar align="right" skill="TypeScript" skillExpertise={60} />
+						<SkillBar align="right" skill="PHP" skillExpertise={70} />
+						<SkillBar align="right" skill="MySQL" skillExpertise={70} />
 					</div>
 				</div>
 			</div>
@@ -96,7 +107,7 @@
 							Professional Experience
 						</h1>
 
-						<div class="flex flex-col ml-6">
+						<div class="flex flex-col md:ml-6">
 							<div class="text-blue-500 font-semibold mt-5 mb-3">November 2021 - Present</div>
 							<div class="font-bold">Frontend Developer</div>
 							<div>Fully Remote - Shopping Cart Elite - USA</div>
