@@ -1,26 +1,25 @@
-<section id="home" class="intro-section w-full md:w-11/12 mx-auto">
-	<div class="flex flex-row text-white">
+<section id="home" class="intro-section w-full md:w-11/12 mx-auto pt-10 md:pt-40">
+	<div class="flex flex-col md:flex-row text-white">
 		<!-- START THE CONTENT FOR THE INTRO  -->
-		<div class="basis-1/2 ml-4">
-			<h1 class="pl-9 text-6xl">
-				<span class="font-bold text-7xl">Hey,<br /> I'm Kawsar Ahmed</span>
-				<span class="text-4xl"> Software Engineer | Frontend | Svelte Expert </span>
+		<div class="flex basis-1/2 md:ml-4">
+			<h1 class="pl-3 md:pl-9 md:text-6xl">
+				<span class="font-bold text-5xl md:text-7xl">Hey,<br /> I'm Kawsar Ahmed</span> <br />
+				<span class="text-2xl md:text-4xl"> Software Engineer | Frontend | Svelte Expert </span>
 				<br />
-				<span class="text-xl -mt-10"> More than 4 years of remote job experience </span>
+				<span class="invisible md:visible text-xl md:-mt-10">
+					More than 4 years of remote job experience
+				</span>
 			</h1>
 		</div>
 		<!-- START THE CONTENT FOR THE VIDEO -->
-		<div class="basis-1/2">
-			<div class="relative">
+		<div class="flex basis-1/2">
+			<div class="md:relative">
 				<img
 					src="images/arts/intro-section-illustration.png"
 					alt="video illutration"
-					class="ml-40"
+					class="md:ml-40"
 				/>
-				<a href="#" class="glightbox absolute top-1/2 left-1/2">
-					<!-- <span>
-						<i class="fas fa-play-circle" />
-					</span> -->
+				<a href="#" class="glightbox absolute top-[85%] left-[40%] md:top-1/2 md:left-1/2">
 					<span class="border-animation border-animation--border-1" />
 					<span class="border-animation border-animation--border-2" />
 				</a>
