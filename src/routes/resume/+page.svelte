@@ -109,12 +109,12 @@
 
 						<div class="flex flex-col md:ml-6">
 							<div class="text-blue-500 font-semibold mt-5 mb-3">October 2021 - Present</div>
-							<div class="font-bold">Frontend Developer</div>
+							<div class="font-bold">Frontend Developer - Middle+</div>
 							<div class="italic">Fully Remote - Shopping Cart Elite - USA</div>
 							<div class="italic">Tech: Svelte, TypeScript, Bootstrap 5</div>
 							<div class="font-medium text-justify ">
 								<!-- list of resp -->
-								I am working to convert a Blockchain bancking system made up with asp.net to Svelte project.
+								I am working to convert a Blockchain banking system made up with asp.net to Svelte project.
 								I made numours standalone Svelte component to use accross the project. I used to work
 								with a team of 4 members. After proving excellent performance, responsibility increase
 								to review other developers code and suggest them to make it efficient to our internal
