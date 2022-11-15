@@ -122,7 +122,7 @@
 							</div>
 
 							<div class="text-blue-500 font-semibold mt-5 mb-3">September 2018 - January 2022</div>
-							<div class="font-bold">Fullstack Web Developer</div>
+							<div class="font-bold">Fullstack Web Developer - Middle</div>
 							<div class="italic">Fully Remote - Kws3 Media Ltd. - UK</div>
 							<div class="italic">Tech: Svelte, TypeScript, Bulma, Docker, PHP, MySQL</div>
 							<div class="font-medium text-justify ">
