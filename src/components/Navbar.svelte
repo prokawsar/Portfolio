@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { page } from '$app/stores';
 </script>
 
 <nav class=" menu shadow p-3">
@@ -19,23 +20,25 @@
 		<div class="w-full hidden flex-grow md:flex md:items-center md:w-auto">
 			<div class="flex justify-end mr-5 font-semibold text-md md:flex-grow">
 				<a
-					href="#home"
+					href="/"
 					class="block mt-4 lg:inline-block text-purple-300 lg:mt-0 active:text-white hover:text-white mr-4"
 				>
 					Home
 				</a>
-				<a
+				<!-- <a
 					href="#skills"
 					class="block mt-4 lg:inline-block lg:mt-0 text-purple-300  hover:text-white mr-4"
 				>
 					Skills
-				</a>
-				<a
-					href="#experience"
-					class="block mt-4 text-purple-300 lg:inline-block lg:mt-0  hover:text-white"
-				>
-					Experience
-				</a>
+				</a> -->
+				{#if !$page.url.pathname.includes('resume')}
+					<a
+						href="/resume"
+						class="block mt-4 text-purple-300 lg:inline-block lg:mt-0  hover:text-white"
+					>
+						Resume
+					</a>
+				{/if}
 			</div>
 			<div>
 				<a

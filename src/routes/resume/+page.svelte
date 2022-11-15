@@ -75,7 +75,7 @@
 						Key Skills
 					</h1>
 					<div class="flex flex-col m-3 md:m-5">
-						<SkillBar align="right" skill="Svelte" skillExpertise={80} />
+						<SkillBar align="right" skill="Svelte" skillExpertise={90} />
 						<SkillBar align="right" skill="SvelteKit" skillExpertise={60} />
 						<SkillBar align="right" skill="Bootstrap 5" skillExpertise={85} />
 						<SkillBar align="right" skill="Tailwind" skillExpertise={60} />
