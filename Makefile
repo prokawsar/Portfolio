@@ -1,4 +1,4 @@
-var := something
+var := "something"
 
 targets:
 	touch newfile.txt
