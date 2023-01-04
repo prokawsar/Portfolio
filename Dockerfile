@@ -21,10 +21,9 @@
 FROM node:16.16.0-alpine3.16 AS builder
 WORKDIR /app
 COPY package.json package-lock.json ./
-RUN npm ci
+RUN npm i
 COPY . .
 RUN npm run build
-RUN npm ci --prod
 
 FROM node:16.16.0-alpine3.16
 USER node:node
