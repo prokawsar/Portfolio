@@ -1,7 +1,8 @@
 ecr_repo_name := prokawsar-repo
 ecr_uri := 848641662902.dkr.ecr.ap-southeast-1.amazonaws.com
 aws_region := ap-southeast-1
-version_tag := 1.0
+# version_tag := 1.0
+version_tag := $(shell git rev-parse HEAD | cut -c 1-8)
 
 aws_docker_login:
 	aws ecr get-login-password --region ${aws_region} | docker login --username AWS --password-stdin ${ecr_uri}
