@@ -108,7 +108,7 @@
 						</h1>
 
 						<div class="flex flex-col md:ml-6">
-							<div class="text-blue-500 font-semibold mt-5 mb-3">October 2021 - Present</div>
+							<div class="text-blue-500 font-semibold mt-5 mb-3">January 2022 - Present</div>
 							<div class="font-bold">Frontend Developer - Middle+</div>
 							<div class="italic">Fully Remote - Shopping Cart Elite - USA</div>
 							<div class="italic">Tech: Svelte, TypeScript, Bootstrap 5</div>
