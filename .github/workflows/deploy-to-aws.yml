@@ -9,17 +9,15 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Linux update and install aws
-        run: |
-          sudo apt update
-          curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
-          unzip awscliv2.zip
-          sudo ./aws/install --update
+      # - name: Linux update and install aws
+      #   run: |
+      #     sudo apt update
+      #     curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+      #     unzip awscliv2.zip
+      #     sudo ./aws/install --update
       - name: Checkout
         uses: actions/checkout@v2
 
-      # - name: Login AWS docker
-      #   run: make aws_docker_login
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v1
         with:
