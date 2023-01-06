@@ -5,10 +5,16 @@ on:
     branches: [master]
 jobs:
   deployment:
-    name: Push to ECR
+    name: Build and Push to ECR
     runs-on: ubuntu-latest
 
     steps:
+      - name: Linux update and install aws
+        run: |
+          sudo apt update
+          curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+          unzip awscliv2.zip
+          sudo ./aws/install
       - name: Checkout
         uses: actions/checkout@v2
 
