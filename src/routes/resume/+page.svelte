@@ -1,6 +1,7 @@
 <script lang="ts">
 	import SvgIcon from '../../components/SvgIcon.svelte';
 	import SkillBar from '../../components/SkillBar.svelte';
+	import Jobs from '$lib/components/jobs.svelte';
 </script>
 
 <div class="container mx-auto ">
@@ -78,7 +79,7 @@
 						<SkillBar align="right" skill="Svelte" skillExpertise={90} />
 						<SkillBar align="right" skill="SvelteKit" skillExpertise={60} />
 						<SkillBar align="right" skill="Bootstrap 5" skillExpertise={85} />
-						<SkillBar align="right" skill="Tailwind" skillExpertise={60} />
+						<SkillBar align="right" skill="Tailwind" skillExpertise={80} />
 						<SkillBar align="right" skill="JavaScript" skillExpertise={80} />
 						<SkillBar align="right" skill="TypeScript" skillExpertise={60} />
 						<SkillBar align="right" skill="PHP" skillExpertise={70} />
@@ -108,29 +109,30 @@
 						</h1>
 
 						<div class="flex flex-col md:ml-6">
-							<div class="text-blue-500 font-semibold mt-5 mb-3">January 2022 - Present</div>
-							<div class="font-bold">Frontend Developer - Middle+</div>
-							<div class="italic">Fully Remote - Shopping Cart Elite - USA</div>
-							<div class="italic">Tech: Svelte, TypeScript, Bootstrap 5</div>
-							<div class="font-medium text-justify ">
-								<!-- list of resp -->
-								I am working to convert a Blockchain banking system made up with asp.net to Svelte project.
+							<Jobs
+								timeDuration="January 2022 - Present"
+								role="Frontend Developer"
+								level="Middle+"
+								company="Shopping Cart Elite - USA"
+								jobType="Fully Remote"
+								tech="Svelte, SvelteKit, TypeScript, Bootstrap 5"
+								responsibility="I am working to convert a Blockchain banking system made up with asp.net to Svelte project.
 								I made numours standalone Svelte component to use accross the project. I used to work
 								with a team of 4 members. After proving excellent performance, responsibility increase
 								to review other developers code and suggest them to make it efficient to our internal
-								standard.
-							</div>
+								standard."
+							/>
 
-							<div class="text-blue-500 font-semibold mt-5 mb-3">September 2018 - January 2022</div>
-							<div class="font-bold">Fullstack Web Developer - Middle</div>
-							<div class="italic">Fully Remote - Kws3 Media Ltd. - UK</div>
-							<div class="italic">Tech: Svelte, TypeScript, Bulma, Docker, PHP, MySQL</div>
-							<div class="font-medium text-justify ">
-								<!-- list of resp -->
-								Worked in Kws3 Media for 3 years as Full Stack Web Developer. We used make dashboard
-								panel, which has tons of feature like customer management, product management, order
-								management, reports and so on.
-							</div>
+							<Jobs
+								timeDuration="September 2018 - January 2022"
+								role="Fullstack Web Developer"
+								company="Kws3 Media Ltd. - UK"
+								jobType="Fully Remote"
+								tech="Svelte, TypeScript, Bulma, Docker, PHP, MySQL"
+								responsibility="Worked in Kws3 Media for 3 years as Full Stack Web Developer. We used make dashboard
+							panel, which has tons of feature like customer management, product management, order
+							management, reports and so on."
+							/>
 						</div>
 					</div>
 				</div>
