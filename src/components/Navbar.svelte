@@ -44,7 +44,7 @@
 				<a
 					href="#"
 					class="inline-block text-lg p-5 leading-none border rounded-full bg-white font-bold text-black hover:border-transparent mt-4 lg:mt-0"
-					>+880 1915983757</a
+					>prokawsar@gmail.com</a
 				>
 			</div>
 		</div>
