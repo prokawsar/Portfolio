@@ -47,12 +47,14 @@
 
 					<div class="flex flex-col m-4 mr-6">
 						<a
-							class="flex md:justify-end"
+							class="flex hover:scale-105 hover:font-medium md:justify-end"
 							href="https://www.linkedin.com/in/prokawsar/"
 							target="_blank">https://www.linkedin.com/in/prokawsar/</a
 						>
-						<a class="flex md:justify-end" href="https://www.github.com/prokawsar/" target="_blank"
-							>https://www.github.com/prokawsar/</a
+						<a
+							class="flex hover:scale-105 md:justify-end hover:font-medium"
+							href="https://www.github.com/prokawsar/"
+							target="_blank">https://www.github.com/prokawsar/</a
 						>
 						<!-- TODOD: Icon here -->
 					</div>
@@ -77,11 +79,11 @@
 					</h1>
 					<div class="flex flex-col m-3 md:m-5">
 						<SkillBar align="right" skill="Svelte" skillExpertise={90} />
-						<SkillBar align="right" skill="SvelteKit" skillExpertise={60} />
-						<SkillBar align="right" skill="Bootstrap 5" skillExpertise={85} />
-						<SkillBar align="right" skill="Tailwind" skillExpertise={80} />
-						<SkillBar align="right" skill="JavaScript" skillExpertise={80} />
-						<SkillBar align="right" skill="TypeScript" skillExpertise={60} />
+						<SkillBar align="right" skill="SvelteKit" skillExpertise={75} />
+						<SkillBar align="right" skill="Bootstrap 5" skillExpertise={80} />
+						<SkillBar align="right" skill="Tailwind" skillExpertise={90} />
+						<SkillBar align="right" skill="JavaScript" skillExpertise={90} />
+						<SkillBar align="right" skill="TypeScript" skillExpertise={65} />
 						<SkillBar align="right" skill="PHP" skillExpertise={70} />
 						<SkillBar align="right" skill="MySQL" skillExpertise={70} />
 					</div>
@@ -110,15 +112,26 @@
 
 						<div class="flex flex-col md:ml-6">
 							<Jobs
-								timeDuration="January 2022 - Present"
-								role="Frontend Developer"
+								timeDuration="May 2023 - Present"
+								role="Frontend Engineer"
+								level="Middle+"
+								company="Ultrablue inc. - Seoul, Korea"
+								jobType="Fully Remote"
+								tech="Svelte, Tailwind Css, Expressjs, Dexiejs, Twitter API"
+								responsibility="I am working for developing and bug fixing of Frontend of chrome extension. Currently we are having
+								4 members in team. Its a great startup to build product and launch it to customer."
+							/>
+
+							<Jobs
+								timeDuration="January 2022 - March 2023"
+								role="Frontend Engineer"
 								level="Middle+"
 								company="Shopping Cart Elite - USA"
 								jobType="Fully Remote"
 								tech="Svelte, SvelteKit, TypeScript, Bootstrap 5"
 								responsibility="I am working to convert a Blockchain banking system made up with asp.net to Svelte project.
 								I made numours standalone Svelte component to use accross the project. I used to work
-								with a team of 4 members. After proving excellent performance, responsibility increase
+								with a team of 7 members. After proving excellent performance, responsibility increase
 								to review other developers code and suggest them to make it efficient to our internal
 								standard."
 							/>
