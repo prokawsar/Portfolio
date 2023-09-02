@@ -5,23 +5,50 @@
 	import ContextMenu from '$lib/components/ContextMenu.svelte'
 	import { goto } from '$app/navigation'
 	import { browser } from '$app/environment'
+	import Accordian from '$lib/components/Accordian.svelte'
+	import Education from '$lib/infos/education.svelte'
+	import Work from '$lib/infos/work.svelte'
+	import Skills from '$lib/infos/skills.svelte'
+	import ResumeGDrive from '$lib/infos/resumeGDrive.svelte'
 
+	const infos = {
+		work: Work,
+		education: Education,
+		skills: Skills,
+		resumeGDrive: ResumeGDrive
+	}
 	const handleMenuEvent = (e: any) => {
 		console.log(e.detail)
+		activeComp = e.detail
 		if (e.detail == 'theme') {
 			handleSwitchDarkMode()
+			return
+		}
+		if (e.detail == 'resume') {
+			goto('/resume')
+			return
+		}
+
+		if (Object.keys(infos).includes(e.detail)) {
+			showInfo = true
 		}
 	}
-	let darkMode = false
+	let darkMode = false,
+		showInfo = false,
+		activeComp = ''
 
 	function handleSwitchDarkMode() {
 		darkMode = !darkMode
 
 		localStorage.setItem('theme', darkMode ? 'dark' : 'light')
 
-		darkMode
-			? document.documentElement.classList.add('dark')
-			: document.documentElement.classList.remove('dark')
+		if (darkMode) {
+			document.documentElement.classList.add('dark')
+			document.documentElement.classList.remove('light')
+		} else {
+			document.documentElement.classList.remove('dark')
+			document.documentElement.classList.add('light')
+		}
 	}
 
 	if (browser) {
@@ -39,7 +66,7 @@
 </script>
 
 <div
-	class="absolute flex justify-center items-center bg-gradient-to-b from-slate-100 to-gray-100 dark:from-slate-700 dark:to-zinc-900 inset-0 md:h-screen mx-auto"
+	class="absolute md:flex justify-center items-center bg-gradient-to-b from-slate-100 to-gray-100 dark:from-slate-700 dark:to-zinc-900 inset-0 md:h-screen mx-auto"
 >
 	<div class="flex flex-col items-center w-full p-4 md:p-10 mx-5 md:mx-20">
 		<p class="hidden sm:flex font-roboto font-light text-black dark:text-white">
@@ -98,4 +125,8 @@
 	<div class="hidden md:flex">
 		<ContextMenu on:menuSelect={(e) => handleMenuEvent(e)} />
 	</div>
+
+	{#if showInfo}
+		<Accordian on:close={() => (showInfo = false)} component={infos[activeComp]} />
+	{/if}
 </div>
