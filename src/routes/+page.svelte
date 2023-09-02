@@ -18,7 +18,6 @@
 		resumeGDrive: ResumeGDrive
 	}
 	const handleMenuEvent = (e: any) => {
-		console.log(e.detail)
 		activeComp = e.detail
 		if (e.detail == 'theme') {
 			handleSwitchDarkMode()

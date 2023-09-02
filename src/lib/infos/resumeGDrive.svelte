@@ -16,5 +16,5 @@
 	width="1140"
 	on:load={() => loadFinish()}
 	allow="autoplay"
-	title="resume"
+	title="Resume of Kawsar Ahmed"
 />
