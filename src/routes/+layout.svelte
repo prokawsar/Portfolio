@@ -1,6 +1,6 @@
 <script>
-	import '../css/app.css';
-	import '../css/style.css';
+	import '../css/style.css'
+	import '../css/app.css'
 </script>
 
 <!-- <Navbar /> -->
