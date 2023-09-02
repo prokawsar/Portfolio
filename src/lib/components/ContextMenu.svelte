@@ -143,7 +143,7 @@ Inspired from: Context Menu https://svelte.dev/repl/3a33725c3adb4f57b46b597f9dad
 								class="w-full text-left text-md py-1 cursor-not-allowed hover:bg-slate-300 hover:rounded dark:hover:bg-slate-800 dark:text-gray-400 {item.class}"
 								on:click={item.disabled ? () => {} : item.onClick}
 								class:cursor-not-allowed={item.disabled}
-								><i class="{item.icon} dark:text-gray-400" />{item.displayText}</button
+								><i class="{item.icon} dark:text-gray-400 px-3" />{item.displayText}</button
 							>
 						</li>
 					{/if}
@@ -159,12 +159,5 @@ Inspired from: Context Menu https://svelte.dev/repl/3a33725c3adb4f57b46b597f9dad
 	* {
 		padding: 1;
 		margin: 0;
-	}
-	/* ul li button:hover {
-		border-radius: 4px;
-		background-color: #eee;
-	} */
-	ul li button i {
-		padding: 0px 15px 0px 10px;
 	}
 </style>
