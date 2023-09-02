@@ -4,9 +4,37 @@
 	import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 	import ContextMenu from '$lib/components/ContextMenu.svelte'
 	import { goto } from '$app/navigation'
+	import { browser } from '$app/environment'
 
 	const handleMenuEvent = (e: any) => {
 		console.log(e.detail)
+		if (e.detail == 'theme') {
+			handleSwitchDarkMode()
+		}
+	}
+	let darkMode = false
+
+	function handleSwitchDarkMode() {
+		darkMode = !darkMode
+
+		localStorage.setItem('theme', darkMode ? 'dark' : 'light')
+
+		darkMode
+			? document.documentElement.classList.add('dark')
+			: document.documentElement.classList.remove('dark')
+	}
+
+	if (browser) {
+		if (
+			localStorage.theme === 'dark' ||
+			(!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
+		) {
+			document.documentElement.classList.add('dark')
+			darkMode = true
+		} else {
+			document.documentElement.classList.remove('dark')
+			darkMode = false
+		}
 	}
 </script>
 
@@ -14,13 +42,13 @@
 	class="absolute flex justify-center items-center bg-gradient-to-b from-slate-100 to-gray-100 dark:from-slate-700 dark:to-zinc-900 inset-0 md:h-screen mx-auto"
 >
 	<div class="flex flex-col items-center w-full p-4 md:p-10 mx-5 md:mx-20">
-		<p class="hidden sm:flex font-roboto font-light">
+		<p class="hidden sm:flex font-roboto font-light text-black dark:text-white">
 			To open the menu, employ a right-click with your mouse
 		</p>
 		<p class="sm:hidden">Tap anywhere to open menu</p>
 		<div class="flex flex-col md:flex-row gap-2 md:gap-5 w-full">
 			<div class="flex flex-col justify-center gap-2 w-full">
-				<h1 class="text-6xl">Hi, <br /> I am Kawsar Ahmed</h1>
+				<h1 class="text-6xl text-black dark:!text-white">Hi, <br /> I am Kawsar Ahmed</h1>
 				<h3 class="text-2xl sm:text-3xl">Software Engineer | Frontend</h3>
 				<p class="text-gray-600">
 					I'm delighted to have you here! As a dedicated Software Engineer specializing in frontend
