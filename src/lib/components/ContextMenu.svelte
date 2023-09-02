@@ -57,6 +57,13 @@ Inspired from: Context Menu https://svelte.dev/repl/3a33725c3adb4f57b46b597f9dad
 			icon: 'fa-solid fa-file',
 			class: ''
 		},
+		{
+			name: 'resumeGoogle',
+			onClick: resumeGDrive,
+			displayText: 'Resume (G Drive)',
+			icon: 'fa-solid fa-file',
+			class: ''
+		},
 		// {
 		// 	name: 'hr'
 		// },
@@ -98,19 +105,23 @@ Inspired from: Context Menu https://svelte.dev/repl/3a33725c3adb4f57b46b597f9dad
 		}
 	}
 	function workExperience() {
-		dispatch('work')
+		dispatch('menuSelect', 'work')
 	}
 	function skills() {
-		dispatch('skills')
+		dispatch('menuSelect', 'skills')
 	}
 	function education() {
-		dispatch('education')
+		dispatch('menuSelect', 'education')
 	}
 	function toggleTheme() {
-		dispatch('theme')
+		dispatch('menuSelect', 'theme')
 	}
 	function resumeLink() {
-		dispatch('resume')
+		dispatch('menuSelect', 'resume')
+	}
+
+	function resumeGDrive() {
+		dispatch('menuSelect', 'resumeGDrive')
 	}
 </script>
 

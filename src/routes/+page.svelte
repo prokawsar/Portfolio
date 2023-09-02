@@ -6,10 +6,7 @@
 	import { goto } from '$app/navigation'
 
 	const handleMenuEvent = (e: any) => {
-		console.log(e.type)
-		if (e.type == 'resume') {
-			goto('/resume')
-		}
+		console.log(e.detail)
 	}
 </script>
 
@@ -71,12 +68,6 @@
 		</div>
 	</div>
 	<div class="hidden md:flex">
-		<ContextMenu
-			on:education={(e) => handleMenuEvent(e)}
-			on:skills={(e) => handleMenuEvent(e)}
-			on:work={(e) => handleMenuEvent(e)}
-			on:theme={(e) => handleMenuEvent(e)}
-			on:resume={(e) => handleMenuEvent(e)}
-		/>
+		<ContextMenu on:menuSelect={(e) => handleMenuEvent(e)} />
 	</div>
 </div>
