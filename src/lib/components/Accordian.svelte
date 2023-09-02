@@ -2,9 +2,9 @@
 	import Fa from 'svelte-fa'
 	import { slide } from 'svelte/transition'
 	import { faMultiply } from '@fortawesome/free-solid-svg-icons'
-	import { createEventDispatcher } from 'svelte'
+	import { SvelteComponent, createEventDispatcher } from 'svelte'
 
-	export let component: any = '',
+	export let component: typeof SvelteComponent,
 		bodyClass = ''
 	const dispatch = createEventDispatcher()
 </script>
