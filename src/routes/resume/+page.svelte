@@ -1,6 +1,6 @@
 <script lang="ts">
-	import SvgIcon from '../../components/SvgIcon.svelte';
-	import SkillBar from '../../components/SkillBar.svelte';
+	import SvgIcon from '$lib/components/SvgIcon.svelte';
+	import SkillBar from '$lib/components/SkillBar.svelte';
 	import Jobs from '$lib/components/jobs.svelte';
 </script>
 
