@@ -5,6 +5,9 @@ module.exports = {
 		extend: {
 			scale: {
 				25: '.25'
+			},
+			backgroundImage: {
+				'hero-bg': "url('/icons/blob-desktop.svg')"
 			}
 		},
 		fontFamily: {
