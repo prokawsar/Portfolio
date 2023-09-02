@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Jobs from '$lib/components/Jobs.svelte'
+	import Jobs from '$lib/components/WorkCard.svelte'
 </script>
 
 <div class="flex flex-col md:ml-6 max-w-lg h-full">

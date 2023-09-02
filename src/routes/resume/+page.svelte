@@ -1,7 +1,7 @@
 <script lang="ts">
 	import SvgIcon from '$lib/components/SvgIcon.svelte'
 	import SkillBar from '$lib/components/SkillBar.svelte'
-	import Jobs from '$lib/components/Jobs.svelte'
+	import WorkCard from '$lib/components/WorkCard.svelte'
 </script>
 
 <div class="container mx-auto ">
@@ -111,7 +111,7 @@
 						</h1>
 
 						<div class="flex flex-col md:ml-6">
-							<Jobs
+							<WorkCard
 								timeDuration="May 2023 - Present"
 								role="Frontend Engineer"
 								level="Middle+"
@@ -122,7 +122,7 @@
 								4 members in team. Its a great startup to build product and launch it to customer."
 							/>
 
-							<Jobs
+							<WorkCard
 								timeDuration="January 2022 - March 2023"
 								role="Frontend Engineer"
 								level="Middle+"
@@ -136,7 +136,7 @@
 								standard."
 							/>
 
-							<Jobs
+							<WorkCard
 								timeDuration="September 2018 - January 2022"
 								role="Fullstack Web Developer"
 								company="Kws3 Media Ltd. - UK"
