@@ -47,8 +47,7 @@ Inspired from: Context Menu https://svelte.dev/repl/3a33725c3adb4f57b46b597f9dad
 			onClick: education,
 			displayText: 'Education',
 			icon: 'fa-solid fa-book',
-			class: '',
-			disabled: true
+			class: ''
 		},
 		{
 			name: 'resume',
@@ -124,17 +123,6 @@ Inspired from: Context Menu https://svelte.dev/repl/3a33725c3adb4f57b46b597f9dad
 		dispatch('menuSelect', 'resumeGDrive')
 	}
 </script>
-
-<svelte:head>
-	<!-- You can change icon sets according to your taste. Change `class` value in `menuItems` above to represent your icons. -->
-	<link
-		rel="stylesheet"
-		href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-		integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
-		crossorigin="anonymous"
-		referrerpolicy="no-referrer"
-	/>
-</svelte:head>
 
 {#if showMenu}
 	<nav use:getContextMenuDimension style="position: absolute; top:{pos.y}px; left:{pos.x}px">
