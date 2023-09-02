@@ -3,7 +3,9 @@
 </script>
 
 <div class="flex flex-col md:ml-6 max-w-lg h-full">
-	<h1 class="text-2xl font-bold font-roboto uppercase tracking-widest">Work Experience</h1>
+	<h1 class="text-2xl font-bold font-roboto uppercase tracking-widest dark:text-slate-300">
+		Work Experience
+	</h1>
 
 	<Jobs
 		timeDuration="January 2022 - Present"
