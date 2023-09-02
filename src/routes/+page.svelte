@@ -3,9 +3,13 @@
 	import Fa from 'svelte-fa'
 	import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 	import ContextMenu from '$lib/components/ContextMenu.svelte'
+	import { goto } from '$app/navigation'
 
 	const handleMenuEvent = (e: any) => {
 		console.log(e.type)
+		if (e.type == 'resume') {
+			goto('/resume')
+		}
 	}
 </script>
 
@@ -72,6 +76,7 @@
 			on:skills={(e) => handleMenuEvent(e)}
 			on:work={(e) => handleMenuEvent(e)}
 			on:theme={(e) => handleMenuEvent(e)}
+			on:resume={(e) => handleMenuEvent(e)}
 		/>
 	</div>
 </div>

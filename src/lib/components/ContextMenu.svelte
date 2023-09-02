@@ -50,6 +50,13 @@ Inspired from: Context Menu https://svelte.dev/repl/3a33725c3adb4f57b46b597f9dad
 			class: '',
 			disabled: true
 		},
+		{
+			name: 'resume',
+			onClick: resumeLink,
+			displayText: 'Resume',
+			icon: 'fa-solid fa-file',
+			class: ''
+		},
 		// {
 		// 	name: 'hr'
 		// },
@@ -101,6 +108,9 @@ Inspired from: Context Menu https://svelte.dev/repl/3a33725c3adb4f57b46b597f9dad
 	}
 	function toggleTheme() {
 		dispatch('theme')
+	}
+	function resumeLink() {
+		dispatch('resume')
 	}
 </script>
 
