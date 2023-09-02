@@ -68,15 +68,15 @@
 	class="absolute md:flex justify-center items-center bg-gradient-to-b from-slate-100 to-gray-100 dark:from-slate-700 dark:to-zinc-900 inset-0 md:h-screen mx-auto"
 >
 	<div class="flex flex-col items-center w-full p-4 md:p-10 md:mx-20">
-		<p class="hidden sm:flex font-roboto font-light text-black dark:text-white">
+		<p class="hidden sm:flex font-roboto font-light text-black dark:text-slate-400">
 			To open the menu, employ a right-click with your mouse
 		</p>
 		<p class="sm:hidden">Tap anywhere to open menu</p>
 		<div class="flex flex-col md:flex-row gap-2 md:gap-5 w-full">
 			<div class="flex flex-col justify-center gap-2 w-full">
-				<h1 class="text-6xl text-black dark:!text-white">Hi, <br /> I am Kawsar Ahmed</h1>
-				<h3 class="text-2xl sm:text-3xl">Software Engineer | Frontend</h3>
-				<p class="text-gray-600">
+				<h1 class="text-6xl text-black dark:text-slate-100">Hi, <br /> I am Kawsar Ahmed</h1>
+				<h3 class="text-2xl sm:text-3xl dark:text-slate-100">Software Engineer | Frontend</h3>
+				<p class="text-gray-600 dark:text-gray-300">
 					I'm delighted to have you here! As a dedicated Software Engineer specializing in frontend
 					development, my focus revolves around crafting top-notch web applications in any tech yet
 					specially with Svelte, SvelteKit. I take pride in writing clean and optimized code,
