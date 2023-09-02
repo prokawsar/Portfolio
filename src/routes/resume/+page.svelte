@@ -1,7 +1,7 @@
 <script lang="ts">
-	import SvgIcon from '$lib/components/SvgIcon.svelte';
-	import SkillBar from '$lib/components/SkillBar.svelte';
-	import Jobs from '$lib/components/Jobs.svelte';
+	import SvgIcon from '$lib/components/SvgIcon.svelte'
+	import SkillBar from '$lib/components/SkillBar.svelte'
+	import Jobs from '$lib/components/Jobs.svelte'
 </script>
 
 <div class="container mx-auto ">

@@ -9,7 +9,10 @@
 	const dispatch = createEventDispatcher()
 </script>
 
-<div class="fixed top-0 bg-white h-full w-full p-10" transition:slide={{ delay: 200 }}>
+<div
+	class="fixed top-0 bg-white h-full w-full p-10 overflow-auto"
+	transition:slide={{ delay: 200 }}
+>
 	<div class="flex flex-col relative">
 		<button
 			class="absolute right-1 hover:bg-gray-200 rounded-full p-1 px-[6px] flex items-center justify-center"
@@ -17,7 +20,7 @@
 		>
 			<Fa icon={faMultiply} />
 		</button>
-		<div class="flex flex-col items-center {bodyClass}">
+		<div class="flex flex-col items-center  {bodyClass}">
 			<svelte:component this={component} />
 		</div>
 	</div>
