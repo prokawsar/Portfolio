@@ -127,10 +127,12 @@ Inspired from: Context Menu https://svelte.dev/repl/3a33725c3adb4f57b46b597f9dad
 	<nav use:getContextMenuDimension style="position: absolute; top:{pos.y}px; left:{pos.x}px">
 		<div
 			transition:slide={{ duration: 200 }}
-			class="flex flex-col gap-1 bg-white py-2 w-44 rounded-lg outline outline-2 outline-[#D0E2FF]"
+			class="flex flex-col gap-1 bg-white dark:bg-slate-700 py-2 w-44 rounded-lg outline outline-2 outline-[#D0E2FF] dark:outline-gray-600"
 			id="navbar"
 		>
-			<p class="text-center text-xl border-b pb-1">Menu</p>
+			<p class="text-center text-xl border-b pb-1 dark:border-b-gray-600 dark:text-gray-300">
+				Menu
+			</p>
 			<ul class="m-1">
 				{#each menuItems as item}
 					{#if item.name == 'hr'}
@@ -138,10 +140,10 @@ Inspired from: Context Menu https://svelte.dev/repl/3a33725c3adb4f57b46b597f9dad
 					{:else}
 						<li class="block list-none">
 							<button
-								class="w-full text-left text-md py-1 cursor-not-allowed {item.class}"
+								class="w-full text-left text-md py-1 cursor-not-allowed hover:bg-slate-300 hover:rounded dark:hover:bg-slate-800 dark:text-gray-400 {item.class}"
 								on:click={item.disabled ? () => {} : item.onClick}
 								class:cursor-not-allowed={item.disabled}
-								><i class={item.icon} />{item.displayText}</button
+								><i class="{item.icon} dark:text-gray-400" />{item.displayText}</button
 							>
 						</li>
 					{/if}
@@ -158,10 +160,10 @@ Inspired from: Context Menu https://svelte.dev/repl/3a33725c3adb4f57b46b597f9dad
 		padding: 1;
 		margin: 0;
 	}
-	ul li button:hover {
+	/* ul li button:hover {
 		border-radius: 4px;
 		background-color: #eee;
-	}
+	} */
 	ul li button i {
 		padding: 0px 15px 0px 10px;
 	}
