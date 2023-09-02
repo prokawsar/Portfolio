@@ -1,4 +1,5 @@
 <script lang="ts">
+	import Capsule from '$lib/components/Capsule.svelte';
 </script>
 
 <div
@@ -14,6 +15,13 @@
 				specially with Svelte, SvelteKit. I take pride in writing clean and optimized code, ensuring
 				that your applications perform at their best.
 			</p>
+			<div class="flex flex-row gap-2">
+				<Capsule text="JavaScript" />
+				<Capsule text="Svelte" />
+				<Capsule text="SvelteKit" />
+				<Capsule text="Tailwind" />
+				<Capsule text="PHP" />
+			</div>
 		</div>
 		<div class="flex w-full relative">
 			<svg class="hidden md:flex" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
