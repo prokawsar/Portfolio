@@ -2,6 +2,7 @@
 module.exports = {
 	content: ['./src/**/*.{html,js,svelte,ts}'],
 	theme: {
+		darkMode: 'class',
 		extend: {
 			scale: {
 				25: '.25'
@@ -15,4 +16,4 @@ module.exports = {
 		}
 	},
 	plugins: []
-};
+}

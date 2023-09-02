@@ -10,7 +10,7 @@
 </script>
 
 <div
-	class="absolute flex justify-center items-center bg-gradient-to-b from-slate-100 to-gray-100 inset-0 md:h-screen mx-auto"
+	class="absolute flex justify-center items-center bg-gradient-to-b from-slate-100 to-gray-100 dark:from-slate-700 dark:to-zinc-900 inset-0 md:h-screen mx-auto"
 >
 	<div class="flex flex-col items-center w-full p-4 md:p-10 mx-5 md:mx-20">
 		<p class="hidden sm:flex font-roboto font-light">
