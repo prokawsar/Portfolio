@@ -27,6 +27,10 @@
 			goto('/resume')
 			return
 		}
+		if (e.detail == 'hire') {
+			window.open('https://www.upwork.com/freelancers/~012f78e5dacf069591', '_blank')
+			return
+		}
 
 		if (Object.keys(infos).includes(e.detail)) {
 			showInfo = true

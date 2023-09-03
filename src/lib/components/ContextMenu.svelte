@@ -34,6 +34,13 @@ Inspired from: Context Menu https://svelte.dev/repl/3a33725c3adb4f57b46b597f9dad
 			class: ''
 		},
 		{
+			name: 'education',
+			onClick: education,
+			displayText: 'Education',
+			icon: 'fa-solid fa-book',
+			class: ''
+		},
+		{
 			name: 'skills',
 			onClick: skills,
 			displayText: 'Skills',
@@ -42,11 +49,22 @@ Inspired from: Context Menu https://svelte.dev/repl/3a33725c3adb4f57b46b597f9dad
 			disabled: true
 		},
 		{
-			name: 'education',
+			name: 'profiles',
 			onClick: education,
-			displayText: 'Education',
-			icon: 'fa-solid fa-book',
-			class: ''
+			displayText: 'Profiles',
+			icon: 'fa-solid fa-user',
+			class: '',
+			disabled: true
+		},
+		{
+			name: 'hire',
+			onClick: hireMe,
+			displayText: 'Hire Me',
+			icon: 'fa-solid fa-user-check',
+			class: 'text-teal-700 dark:text-teal-500 font-semibold'
+		},
+		{
+			name: 'hr'
 		},
 		{
 			name: 'resume',
@@ -62,9 +80,9 @@ Inspired from: Context Menu https://svelte.dev/repl/3a33725c3adb4f57b46b597f9dad
 			icon: 'fa-solid fa-file',
 			class: ''
 		},
-		// {
-		// 	name: 'hr'
-		// },
+		{
+			name: 'hr'
+		},
 		{
 			name: 'settings',
 			onClick: toggleTheme,
@@ -121,6 +139,10 @@ Inspired from: Context Menu https://svelte.dev/repl/3a33725c3adb4f57b46b597f9dad
 	function resumeGDrive() {
 		dispatch('menuSelect', 'resumeGDrive')
 	}
+
+	function hireMe() {
+		dispatch('menuSelect', 'hire')
+	}
 </script>
 
 {#if showMenu}
@@ -136,11 +158,11 @@ Inspired from: Context Menu https://svelte.dev/repl/3a33725c3adb4f57b46b597f9dad
 			<ul class="m-1">
 				{#each menuItems as item}
 					{#if item.name == 'hr'}
-						<hr />
+						<div class="dark:border-b-gray-600 h-1 w-full border-b" />
 					{:else}
 						<li class="block list-none">
 							<button
-								class="w-full text-left text-md py-1 cursor-not-allowed hover:bg-slate-300 hover:rounded dark:hover:bg-slate-800 dark:text-gray-400 {item.class}"
+								class="w-full text-left text-md py-1 cursor-not-allowed hover:font-semibold hover:bg-slate-300 hover:rounded-md dark:hover:text-white dark:hover:bg-slate-800 dark:text-gray-400 {item.class}"
 								on:click={item.disabled ? () => {} : item.onClick}
 								class:cursor-not-allowed={item.disabled}
 								><i class="{item.icon} dark:text-gray-400 px-3" />{item.displayText}</button
