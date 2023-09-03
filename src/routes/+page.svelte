@@ -11,6 +11,7 @@
 	import Skills from '$lib/infos/skills.svelte'
 	import ResumeGDrive from '$lib/infos/resumeGDrive.svelte'
 	import Intro from '$lib/components/Intro.svelte'
+	import MobileFooter from '$lib/components/MobileFooter.svelte'
 
 	const infos = {
 		work: Work,
@@ -89,4 +90,6 @@
 	{#if showInfo}
 		<Accordian on:close={() => (showInfo = false)} component={infos[activeComp]} />
 	{/if}
+
+	<MobileFooter />
 </div>
