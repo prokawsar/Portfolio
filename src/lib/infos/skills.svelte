@@ -3,7 +3,9 @@
 </script>
 
 <div class="flex flex-col w-52">
-	<h1 class="uppercase flex text-xl font-semibold tracking-[.25rem]">Key Skills</h1>
+	<h1 class="text-2xl font-bold font-roboto uppercase tracking-widest dark:text-slate-300">
+		Key Skills
+	</h1>
 	<div class="flex flex-col mt-10">
 		<SkillBar skill="Svelte" skillExpertise={90} />
 		<SkillBar skill="SvelteKit" skillExpertise={75} />
