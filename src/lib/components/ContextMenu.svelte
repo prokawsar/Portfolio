@@ -81,7 +81,7 @@ Known bug:
 			name: 'settings',
 			onClick: toggleTheme,
 			displayText: 'Toggle Theme',
-			icon: 'fa-solid fa-gear',
+			icon: 'fa-solid fa-circle-half-stroke',
 			class: '',
 			disabled: false
 		}
