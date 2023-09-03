@@ -50,6 +50,8 @@
 				class="absolute left-2 md:left-32 md:top-24 scale-75 md:scale-100"
 				src="/images/avatar.png"
 				alt="avatar"
+				height="100%"
+				width="100%"
 			/>
 		</div>
 	</div>
