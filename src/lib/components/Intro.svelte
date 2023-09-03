@@ -10,7 +10,7 @@
 	<div class="flex flex-col md:flex-row gap-2 md:gap-5 w-full">
 		<div class="flex flex-col justify-center gap-2 w-full">
 			<h1 class="text-6xl text-black dark:text-slate-100">Hi, <br /> I am Kawsar Ahmed</h1>
-			<h3 class="text-[26px] sm:text-3xl dark:text-slate-100">Software Engineer | Frontend</h3>
+			<h2 class="text-[26px] sm:text-3xl dark:text-slate-100">Software Engineer | Frontend</h2>
 			<p class="text-gray-600 dark:text-gray-300 text-justify">
 				I'm delighted to have you here! As a dedicated Software Engineer specializing in frontend
 				development, my focus revolves around crafting top-notch web applications in any tech yet
