@@ -1,36 +1,56 @@
-<section id="home" class="intro-section w-full md:w-11/12 mx-auto pt-10 md:pt-40">
-	<div class="flex flex-col md:flex-row text-white">
-		<!-- START THE CONTENT FOR THE INTRO  -->
-		<div class="flex basis-1/2 md:ml-4">
-			<h1 class="pl-3 md:pl-9 md:text-6xl">
-				<span class="font-bold text-5xl md:text-7xl">Hey,<br /> I'm Kawsar Ahmed</span> <br />
-				<span class="text-2xl md:text-4xl"> Software Engineer | Frontend | Svelte Expert </span>
-				<br />
-				<span class="invisible md:visible text-xl md:-mt-10">
-					More than 4 years of remote job experience
-				</span>
-			</h1>
-		</div>
-		<!-- START THE CONTENT FOR THE VIDEO -->
-		<div class="flex basis-1/2">
-			<div class="md:relative">
-				<img
-					src="images/arts/intro-section-illustration.png"
-					alt="video illutration"
-					class="md:ml-40"
-				/>
-				<a href="#" class="glightbox absolute top-[85%] left-[40%] md:top-1/2 md:left-1/2">
-					<span class="border-animation border-animation--border-1" />
-					<span class="border-animation border-animation--border-2" />
-				</a>
+<script>
+	import Capsule from '$lib/components/Capsule.svelte'
+</script>
+
+<div class="flex flex-col items-center w-full p-4 md:p-10 md:mx-20">
+	<p class="hidden sm:flex font-roboto font-light text-black dark:text-slate-400">
+		To open the menu, employ a right-click with your mouse
+	</p>
+	<p class="sm:hidden">Tap anywhere to open menu</p>
+	<div class="flex flex-col md:flex-row gap-2 md:gap-5 w-full">
+		<div class="flex flex-col justify-center gap-2 w-full">
+			<h1 class="text-6xl text-black dark:text-slate-100">Hi, <br /> I am Kawsar Ahmed</h1>
+			<h3 class="text-[26px] sm:text-3xl dark:text-slate-100">Software Engineer | Frontend</h3>
+			<p class="text-gray-600 dark:text-gray-300 text-justify">
+				I'm delighted to have you here! As a dedicated Software Engineer specializing in frontend
+				development, my focus revolves around crafting top-notch web applications in any tech yet
+				specially with Svelte, SvelteKit. I take pride in writing clean and optimized code, ensuring
+				that your applications perform at their best.
+			</p>
+			<div class="flex flex-row gap-2 mt-5">
+				<Capsule text="JavaScript" />
+				<Capsule text="Svelte" />
+				<Capsule text="SvelteKit" />
+				<Capsule text="Tailwind" />
+				<Capsule text="PHP" />
+			</div>
+			<div class="flex flex-row gap-2">
+				<Capsule text="Git" bg="bg-gray-300" textColor="!text-gray-600 dark:!text-gray-400" />
+				<Capsule text="Docker" bg="bg-gray-300" textColor="!text-gray-600 dark:!text-gray-400" />
 			</div>
 		</div>
+		<div class="md:flex md:justify-center w-full hidden relative bg-hero-bg bg-no-repeat bg-cover">
+			<img
+				class="left-2 md:left-0 scale-75 sm:scale-75 lg:scale-100"
+				src="/images/avatar.png"
+				alt="avatar"
+			/>
+		</div>
+
+		<div class="flex w-full relative md:hidden">
+			<svg class="" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+				<path
+					fill="#D0E2FF"
+					d="M47,-71.7C61.7,-63.6,75.2,-52,81.2,-37.5C87.2,-23,85.7,-5.4,82,10.9C78.2,27.1,72.1,42.2,62.5,55.4C53,68.6,39.9,79.9,24.8,84.2C9.8,88.4,-7.3,85.6,-23.9,80.9C-40.5,76.2,-56.7,69.7,-68.7,58.2C-80.7,46.7,-88.5,30.3,-91.4,12.9C-94.3,-4.5,-92.3,-22.9,-84,-37.2C-75.7,-51.5,-61,-61.8,-46,-69.9C-30.9,-77.9,-15.5,-83.7,0.3,-84.2C16.1,-84.6,32.2,-79.9,47,-71.7Z"
+					transform="translate(100 100)"
+				/>
+			</svg>
+
+			<img
+				class="absolute left-2 md:left-32 md:top-24 scale-75 md:scale-100"
+				src="/images/avatar.png"
+				alt="avatar"
+			/>
+		</div>
 	</div>
-	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"
-		><path
-			fill="#ffffff"
-			fill-opacity="1"
-			d="M0,160L48,176C96,192,192,224,288,208C384,192,480,128,576,133.3C672,139,768,213,864,202.7C960,192,1056,96,1152,74.7C1248,53,1344,107,1392,133.3L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
-		/></svg
-	>
-</section>
+</div>
