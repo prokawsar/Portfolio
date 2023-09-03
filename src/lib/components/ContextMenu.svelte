@@ -8,6 +8,7 @@ Known bug:
 <script lang="ts">
 	import { createEventDispatcher } from 'svelte'
 	import { slide } from 'svelte/transition'
+	import SubMenu from './SubMenu.svelte'
 
 	// pos is cursor position when right click occur
 	let pos = { x: 0, y: 0 }
@@ -48,8 +49,7 @@ Known bug:
 			onClick: education,
 			displayText: 'Profiles',
 			icon: 'fa-solid fa-user',
-			class: '',
-			disabled: true
+			class: ''
 		},
 		{
 			name: 'hire',
@@ -61,13 +61,13 @@ Known bug:
 		{
 			name: 'hr'
 		},
-		{
-			name: 'resume',
-			onClick: resumeLink,
-			displayText: 'Resume',
-			icon: 'fa-solid fa-file',
-			class: ''
-		},
+		// {
+		// 	name: 'resume',
+		// 	onClick: resumeLink,
+		// 	displayText: 'Resume',
+		// 	icon: 'fa-solid fa-file',
+		// 	class: ''
+		// },
 		{
 			name: 'resumeGoogle',
 			onClick: resumeGDrive,
@@ -138,6 +138,7 @@ Known bug:
 	function hireMe() {
 		dispatch('menuSelect', 'hire')
 	}
+	let showProfiles = false
 </script>
 
 {#if showMenu}
@@ -159,6 +160,8 @@ Known bug:
 							<button
 								class="w-full text-left text-md py-1 cursor-not-allowed hover:font-semibold hover:bg-slate-300 hover:rounded-md dark:hover:text-white dark:hover:bg-slate-800 dark:text-gray-400 {item.class}"
 								on:click={item.disabled ? () => {} : item.onClick}
+								on:mouseenter={() =>
+									item.name == 'profiles' ? (showProfiles = true) : (showProfiles = false)}
 								class:cursor-not-allowed={item.disabled}
 								><i class="{item.icon} dark:text-gray-400 px-3" />{item.displayText}</button
 							>
@@ -168,6 +171,10 @@ Known bug:
 			</ul>
 		</div>
 	</nav>
+
+	{#if showProfiles}
+		<SubMenu pos={{ x: pos.x + 180, y: pos.y + 140 }} bind:showProfiles />
+	{/if}
 {/if}
 
 <svelte:window on:contextmenu|preventDefault={rightClickContextMenu} on:click={onPageClick} />

@@ -10,8 +10,8 @@
 </script>
 
 <div
-	class="fixed top-0 bg-white dark:bg-slate-800 h-full w-full p-10 overflow-auto"
-	transition:slide={{ delay: 200 }}
+	class="fixed top-0 bg-gradient-to-t from-slate-50 to-zinc-200 dark:from-slate-700 dark:to-zinc-900 h-full w-full p-10 overflow-auto"
+	transition:slide={{ duration: 500 }}
 >
 	<div class="flex flex-col relative">
 		<button
