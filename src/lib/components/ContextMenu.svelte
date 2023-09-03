@@ -41,8 +41,7 @@ Known bug:
 			onClick: skills,
 			displayText: 'Skills',
 			icon: 'fa-solid fa-microchip',
-			class: '',
-			disabled: true
+			class: ''
 		},
 		{
 			name: 'profiles',
