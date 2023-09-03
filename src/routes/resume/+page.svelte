@@ -1,5 +1,4 @@
 <script lang="ts">
-	import SvgIcon from '$lib/components/SvgIcon.svelte'
 	import SkillBar from '$lib/components/SkillBar.svelte'
 	import WorkCard from '$lib/components/WorkCard.svelte'
 </script>
