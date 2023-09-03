@@ -2,11 +2,11 @@
 	import Capsule from '$lib/components/Capsule.svelte'
 </script>
 
-<div class="flex flex-col items-center w-full p-4 md:p-10 md:mx-20">
+<div class="fixed sm:relative flex flex-col items-center w-full p-4 md:p-10 md:mx-20">
 	<p class="hidden sm:flex font-roboto font-light text-black dark:text-slate-400">
 		To open the menu, employ a right-click with your mouse
 	</p>
-	<p class="sm:hidden">Tap anywhere to open menu</p>
+	<p class="sm:hidden dark:text-slate-400">Tap anywhere to open menu</p>
 	<div class="flex flex-col md:flex-row gap-2 md:gap-5 w-full">
 		<div class="flex flex-col justify-center gap-2 w-full">
 			<h1 class="text-6xl text-black dark:text-slate-100">Hi, <br /> I am Kawsar Ahmed</h1>

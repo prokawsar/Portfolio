@@ -48,7 +48,7 @@ Known bug:
 			onClick: education,
 			displayText: 'Profiles',
 			icon: 'fa-solid fa-user',
-			class: ''
+			class: 'hidden md:block'
 		},
 		{
 			name: 'hire',
@@ -87,6 +87,21 @@ Known bug:
 		}
 	]
 
+	function isMobile() {
+		const toMatch = [
+			/Android/i,
+			/webOS/i,
+			/iPhone/i,
+			/iPad/i,
+			/iPod/i,
+			/BlackBerry/i,
+			/Windows Phone/i
+		]
+
+		return toMatch.some((toMatchItem) => {
+			return navigator.userAgent.match(toMatchItem)
+		})
+	}
 	function rightClickContextMenu(e: MouseEvent) {
 		showMenu = true
 		browser = {
@@ -101,9 +116,38 @@ Known bug:
 		if (browser.h - pos.y < menu.h) pos.y = pos.y - menu.h
 		if (browser.w - pos.x < menu.w) pos.x = pos.x - menu.w
 	}
-	function onPageClick(e: Event) {
-		showMenu = false
+
+	function touchContextMenu(e: TouchEvent) {
+		if (e.target && e.target.type == 'button') {
+			return
+		}
+
+		if (showMenu) {
+			showMenu = false
+			return
+		}
+
+		showMenu = true
+		browser = {
+			w: window.innerWidth,
+			h: window.innerHeight
+		}
+
+		pos = {
+			x: e.touches[0].clientX,
+			y: e.touches[0].clientY + 15
+		}
+
+		if (browser.h - pos.y < menu.h) pos.y = pos.y - menu.h
+		if (browser.w - pos.x < menu.w) pos.x = pos.x - menu.w
 	}
+
+	function onPageClick(e: Event) {
+		if (!isMobile()) {
+			showMenu = false
+		}
+	}
+
 	function getContextMenuDimension(node: HTMLElement) {
 		// This function will get context menu dimension
 		// when navigation is shown => showMenu = true
@@ -114,6 +158,7 @@ Known bug:
 			w: width
 		}
 	}
+
 	function workExperience() {
 		dispatch('menuSelect', 'work')
 	}
@@ -157,6 +202,7 @@ Known bug:
 					{:else}
 						<li class="block list-none">
 							<button
+								type="button"
 								class="w-full text-left text-md py-1 cursor-not-allowed hover:font-semibold hover:bg-slate-300 hover:rounded-md dark:hover:text-white dark:hover:bg-slate-800 dark:text-gray-400 {item.class}"
 								on:click={item.disabled ? () => {} : item.onClick}
 								on:mouseenter={() =>
@@ -176,7 +222,11 @@ Known bug:
 	{/if}
 {/if}
 
-<svelte:window on:contextmenu|preventDefault={rightClickContextMenu} on:click={onPageClick} />
+<svelte:window
+	on:contextmenu|preventDefault={rightClickContextMenu}
+	on:click|preventDefault={onPageClick}
+	on:touchstart={touchContextMenu}
+/>
 
 <style>
 	* {
