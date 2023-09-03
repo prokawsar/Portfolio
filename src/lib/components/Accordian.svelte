@@ -18,7 +18,7 @@
 			class="absolute right-1 hover:bg-slate-50 dark:hover:bg-slate-700 rounded-full p-1 px-[6px] flex items-center justify-center"
 			on:click={() => dispatch('close')}
 		>
-			<Fa icon={faMultiply} class="dark:text-white" />
+			<Fa icon={faMultiply} size="1.3x" class="dark:text-white" />
 		</button>
 		<div class="flex flex-col items-center  {bodyClass}">
 			<svelte:component this={component} />
