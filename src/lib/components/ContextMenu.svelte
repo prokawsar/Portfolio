@@ -10,6 +10,7 @@ Inspired from: Context Menu https://svelte.dev/repl/3a33725c3adb4f57b46b597f9dad
 <script lang="ts">
 	import { createEventDispatcher } from 'svelte'
 	import { slide } from 'svelte/transition'
+	import SubMenu from './SubMenu.svelte'
 
 	// pos is cursor position when right click occur
 	let pos = { x: 0, y: 0 }
@@ -50,8 +51,7 @@ Inspired from: Context Menu https://svelte.dev/repl/3a33725c3adb4f57b46b597f9dad
 			onClick: education,
 			displayText: 'Profiles',
 			icon: 'fa-solid fa-user',
-			class: '',
-			disabled: true
+			class: ''
 		},
 		{
 			name: 'hire',
@@ -140,6 +140,7 @@ Inspired from: Context Menu https://svelte.dev/repl/3a33725c3adb4f57b46b597f9dad
 	function hireMe() {
 		dispatch('menuSelect', 'hire')
 	}
+	let showProfiles = false
 </script>
 
 {#if showMenu}
@@ -161,6 +162,8 @@ Inspired from: Context Menu https://svelte.dev/repl/3a33725c3adb4f57b46b597f9dad
 							<button
 								class="w-full text-left text-md py-1 cursor-not-allowed hover:font-semibold hover:bg-slate-300 hover:rounded-md dark:hover:text-white dark:hover:bg-slate-800 dark:text-gray-400 {item.class}"
 								on:click={item.disabled ? () => {} : item.onClick}
+								on:mouseenter={() =>
+									item.name == 'profiles' ? (showProfiles = true) : (showProfiles = false)}
 								class:cursor-not-allowed={item.disabled}
 								><i class="{item.icon} dark:text-gray-400 px-3" />{item.displayText}</button
 							>
@@ -170,6 +173,10 @@ Inspired from: Context Menu https://svelte.dev/repl/3a33725c3adb4f57b46b597f9dad
 			</ul>
 		</div>
 	</nav>
+
+	{#if showProfiles}
+		<SubMenu pos={{ x: pos.x + 180, y: pos.y + 140 }} bind:showProfiles />
+	{/if}
 {/if}
 
 <svelte:window on:contextmenu|preventDefault={rightClickContextMenu} on:click={onPageClick} />
