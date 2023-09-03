@@ -17,6 +17,11 @@
 		skills: Skills,
 		resumeGDrive: ResumeGDrive
 	}
+
+	let darkMode = false,
+		showInfo = false,
+		activeComp = ''
+
 	const handleMenuEvent = (e: any) => {
 		activeComp = e.detail
 		if (e.detail == 'theme') {
@@ -36,9 +41,6 @@
 			showInfo = true
 		}
 	}
-	let darkMode = false,
-		showInfo = false,
-		activeComp = ''
 
 	function handleSwitchDarkMode() {
 		darkMode = !darkMode
@@ -69,7 +71,7 @@
 </script>
 
 <div
-	class="absolute md:flex justify-center items-center bg-gradient-to-b from-slate-100 to-gray-100 dark:from-slate-700 dark:to-zinc-900 inset-0 md:h-screen mx-auto"
+	class="absolute md:flex justify-center items-center bg-gradient-to-b from-slate-50 to-zinc-300 dark:from-slate-700 dark:to-zinc-900 inset-0 md:h-screen mx-auto"
 >
 	<div class="flex flex-col items-center w-full p-4 md:p-10 md:mx-20">
 		<p class="hidden sm:flex font-roboto font-light text-black dark:text-slate-400">
@@ -79,19 +81,23 @@
 		<div class="flex flex-col md:flex-row gap-2 md:gap-5 w-full">
 			<div class="flex flex-col justify-center gap-2 w-full">
 				<h1 class="text-6xl text-black dark:text-slate-100">Hi, <br /> I am Kawsar Ahmed</h1>
-				<h3 class="text-2xl sm:text-3xl dark:text-slate-100">Software Engineer | Frontend</h3>
-				<p class="text-gray-600 dark:text-gray-300">
+				<h3 class="text-[26px] sm:text-3xl dark:text-slate-100">Software Engineer | Frontend</h3>
+				<p class="text-gray-600 dark:text-gray-300 text-justify">
 					I'm delighted to have you here! As a dedicated Software Engineer specializing in frontend
 					development, my focus revolves around crafting top-notch web applications in any tech yet
 					specially with Svelte, SvelteKit. I take pride in writing clean and optimized code,
 					ensuring that your applications perform at their best.
 				</p>
-				<div class="flex flex-row gap-2">
+				<div class="flex flex-row gap-2 mt-5">
 					<Capsule text="JavaScript" />
 					<Capsule text="Svelte" />
 					<Capsule text="SvelteKit" />
 					<Capsule text="Tailwind" />
 					<Capsule text="PHP" />
+				</div>
+				<div class="flex flex-row gap-2">
+					<Capsule text="Git" bg="bg-gray-300" textColor="!text-gray-600 dark:!text-gray-400" />
+					<Capsule text="Docker" bg="bg-gray-300" textColor="!text-gray-600 dark:!text-gray-400" />
 				</div>
 			</div>
 			<div
@@ -102,10 +108,6 @@
 					src="/images/avatar.png"
 					alt="avatar"
 				/>
-				<!-- <div class="absolute flex flex-row gap-2 left-1/4">
-					<Fa icon={faGithub} />
-					<Fa icon={faLinkedin} />
-				</div> -->
 			</div>
 
 			<div class="flex w-full relative md:hidden">

@@ -63,13 +63,13 @@ Inspired from: Context Menu https://svelte.dev/repl/3a33725c3adb4f57b46b597f9dad
 		{
 			name: 'hr'
 		},
-		{
-			name: 'resume',
-			onClick: resumeLink,
-			displayText: 'Resume',
-			icon: 'fa-solid fa-file',
-			class: ''
-		},
+		// {
+		// 	name: 'resume',
+		// 	onClick: resumeLink,
+		// 	displayText: 'Resume',
+		// 	icon: 'fa-solid fa-file',
+		// 	class: ''
+		// },
 		{
 			name: 'resumeGoogle',
 			onClick: resumeGDrive,
