@@ -4,63 +4,65 @@ Known bug:
     Hence, we cannot get menu.h and menu.y dimension, since context menu has not been available at DOM.
     The first right click will not shown properly when right-click occurs around the edge (bottom part
     and right part) of the browser.
-
-Inspired from: Context Menu https://svelte.dev/repl/3a33725c3adb4f57b46b597f9dade0c1?version=3.25.0
 -->
 <script lang="ts">
-	import { createEventDispatcher } from 'svelte'
+	import { createEventDispatcher, onMount } from 'svelte'
 	import { slide } from 'svelte/transition'
 
-	// pos is cursor position when right click occur
 	export let pos = { x: 0, y: 0 },
 		showProfiles
 	// menu is dimension (height and width) of context menu
 	let menu = { h: 0, w: 0 }
 	// browser/window dimension (height and width)
 	let browser = { h: 0, w: 0 }
-	// showMenu is state of context-menu visibility
-	let showMenu = false
 
 	const dispatch = createEventDispatcher()
 
 	const menuItems = [
 		{
 			name: 'github',
-			onClick: education,
+			onClick: openProfile,
 			displayText: 'GitHub',
 			icon: 'fa-brands fa-github',
 			class: '',
-			disabled: true
+			url: 'https://github.com/prokawsar'
 		},
 		{
 			name: 'linkedin',
-			onClick: hireMe,
+			onClick: openProfile,
 			displayText: 'LinkedIn',
 			icon: 'fa-brands fa-linkedin',
 			class: '',
-			disabled: true
+			url: 'https://www.linkedin.com/in/prokawsar/'
 		},
 		{
 			name: 'upwork',
-			onClick: resumeLink,
+			onClick: openProfile,
 			displayText: 'Upwork',
 			icon: 'fa-solid fa-house',
-			class: '',
-			disabled: true
+			url: 'https://www.upwork.com/freelancers/~012f78e5dacf069591',
+			class: ''
 		},
 		{
 			name: 'stackoverflow',
-			onClick: resumeGDrive,
+			onClick: openProfile,
 			displayText: 'Stackoverflow',
 			icon: 'fa-brands fa-stack-overflow',
 			class: '',
-			disabled: true
+			url: 'https://stackoverflow.com/users/4826019/prokawsar',
+			disabled: false
 		}
 	]
 
+	onMount(() => {
+		browser = {
+			w: window.innerWidth,
+			h: window.innerHeight
+		}
+		if (browser.h - pos.y < menu.h) pos.y = pos.y - menu.h
+		if (browser.w - pos.x < menu.w) pos.x = pos.x - menu.w - 185
+	})
 	function getContextMenuDimension(node: HTMLElement) {
-		// This function will get context menu dimension
-		// when navigation is shown => showMenu = true
 		let height = node.offsetHeight
 		let width = node.offsetWidth
 		menu = {
@@ -68,32 +70,13 @@ Inspired from: Context Menu https://svelte.dev/repl/3a33725c3adb4f57b46b597f9dad
 			w: width
 		}
 	}
-	function workExperience() {
-		dispatch('menuSelect', 'work')
-	}
-	function skills() {
-		dispatch('menuSelect', 'skills')
-	}
-	function education() {
-		dispatch('menuSelect', 'education')
-	}
-	function toggleTheme() {
-		dispatch('menuSelect', 'theme')
-	}
-	function resumeLink() {
-		dispatch('menuSelect', 'resume')
-	}
-
-	function resumeGDrive() {
-		dispatch('menuSelect', 'resumeGDrive')
-	}
-
-	function hireMe() {
-		dispatch('menuSelect', 'hire')
+	function openProfile(menuItem: any) {
+		menuItem.url ? window.open(menuItem.url, '_blank') : ''
 	}
 </script>
 
 <nav
+	use:getContextMenuDimension
 	style="position: absolute; top:{pos.y}px; left:{pos.x}px"
 	on:mouseenter={() => (showProfiles = true)}
 	on:mouseleave={() => (showProfiles = false)}
@@ -111,7 +94,7 @@ Inspired from: Context Menu https://svelte.dev/repl/3a33725c3adb4f57b46b597f9dad
 					<li class="block list-none">
 						<button
 							class="w-full text-left text-md py-1 cursor-not-allowed hover:font-semibold hover:bg-slate-300 hover:rounded-md dark:hover:text-white dark:hover:bg-slate-800 dark:text-gray-400 {item.class}"
-							on:click={item.disabled ? () => {} : item.onClick}
+							on:click={() => (item.disabled ? '' : item.onClick(item))}
 							class:cursor-not-allowed={item.disabled}
 							><i class="{item.icon} dark:text-gray-400 px-3" />{item.displayText}</button
 						>
