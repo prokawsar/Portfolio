@@ -17,7 +17,7 @@
 				specially with Svelte, SvelteKit. I take pride in writing clean and optimized code, ensuring
 				that your applications perform at their best.
 			</p>
-			<div class="flex flex-row gap-2 mt-5">
+			<div class="flex flex-row gap-2 mt-5 flex-wrap">
 				<Capsule text="JavaScript" />
 				<Capsule text="Svelte" />
 				<Capsule text="SvelteKit" />
