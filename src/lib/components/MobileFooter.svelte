@@ -33,7 +33,7 @@
 </script>
 
 <div
-	class="bg-zinc-300 dark:bg-zinc-900 w-full fixed flex flex-row items-center justify-around sm:hidden bottom-0 h-14"
+	class="bg-zinc-300 dark:bg-zinc-900 w-full fixed flex flex-row items-center justify-around lg:hidden bottom-0 h-14"
 >
 	{#each menuItems as menu}
 		<button
