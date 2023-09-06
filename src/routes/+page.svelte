@@ -83,9 +83,7 @@
 	class="absolute md:flex justify-center items-center bg-gradient-to-b from-slate-50 to-zinc-300 dark:from-slate-700 dark:to-zinc-900 inset-0 md:h-screen mx-auto"
 >
 	<Intro />
-	<div class="">
-		<ContextMenu on:menuSelect={(e) => handleMenuEvent(e)} />
-	</div>
+	<ContextMenu on:menuSelect={(e) => handleMenuEvent(e)} />
 
 	{#if showInfo}
 		<Accordian on:close={() => (showInfo = false)} component={infos[activeComp]} />

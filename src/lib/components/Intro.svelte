@@ -23,10 +23,12 @@
 				<Capsule text="SvelteKit" />
 				<Capsule text="Tailwind" />
 				<Capsule text="PHP" />
+				<Capsule text="Rest API" />
 			</div>
 			<div class="flex flex-row gap-2">
 				<Capsule text="Git" bg="bg-gray-300" textColor="!text-gray-600 dark:!text-gray-400" />
 				<Capsule text="Docker" bg="bg-gray-300" textColor="!text-gray-600 dark:!text-gray-400" />
+				<Capsule text="Learner" bg="bg-gray-300" textColor="!text-gray-600 dark:!text-gray-400" />
 			</div>
 		</div>
 		<div class="lg:flex lg:justify-center w-full hidden relative bg-hero-bg bg-no-repeat bg-cover">
