@@ -75,9 +75,8 @@
 <svelte:head>
 	<meta
 		name="description"
-		content="Software Engineer, Svelte developer, SvelteKit developer, Svelte Engineer"
+		content="Author: Kawsar Ahmed (prokawsar), Top rated svelte freelancer, Upwork, Software Engineer, Svelte developer, SvelteKit developer, Svelte Engineer"
 	/>
-	<meta name="description" content="Author: Kawsar Ahmed, Top rated svelte freelancer, Upwork" />
 </svelte:head>
 <div
 	class="absolute md:flex justify-center items-center bg-gradient-to-b from-slate-50 to-zinc-300 dark:from-slate-700 dark:to-zinc-900 inset-0 md:h-screen mx-auto"
