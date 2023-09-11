@@ -9,7 +9,7 @@
 		Key Skills
 	</h1>
 	<div class="flex flex-col mt-10 w-full">
-		<div class="flex flex-col md:flex-row gap-2">
+		<div class="flex flex-col md:flex-row gap-3 items-center">
 			<div class="w-full">
 				<p class="font-semibold text-lg">Frontend</p>
 				<SkillBar skill="Svelte" skillExpertise={90} />
@@ -26,19 +26,20 @@
 				<SkillBar skill="MySQL" skillExpertise={75} color="bg-purple-500" />
 			</div>
 		</div>
-		<div class="flex flex-col md:flex-row gap-2">
+		<div class="flex flex-col md:flex-row gap-3 items-center">
 			<div class="w-full">
 				<p class="font-semibold text-lg mt-4">Familiar with</p>
 				<SkillBar skill="React" skillExpertise={65} color="bg-blue-400" />
 				<SkillBar skill="React Native" skillExpertise={55} color="bg-blue-400" />
 				<SkillBar skill="Next.js" skillExpertise={65} color="bg-blue-400" />
 				<SkillBar skill="Linux" skillExpertise={70} color="bg-blue-400" />
+				<SkillBar skill="Directus" skillExpertise={50} color="bg-blue-400" />
 			</div>
 			<div class="w-full">
 				<p class="font-semibold text-lg mt-4">Tools</p>
-				<SkillBar skill="Git" skillExpertise={90} />
-				<SkillBar skill="VS Code" skillExpertise={80} />
-				<SkillBar skill="Docker" skillExpertise={65} />
+				<SkillBar skill="Git" skillExpertise={90} color="bg-indigo-500" />
+				<SkillBar skill="VS Code" skillExpertise={80} color="bg-indigo-500" />
+				<SkillBar skill="Docker" skillExpertise={65} color="bg-indigo-500" />
 			</div>
 		</div>
 	</div>
