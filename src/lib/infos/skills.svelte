@@ -32,6 +32,8 @@
 				<SkillBar skill="React" skillExpertise={65} color="bg-blue-400" />
 				<SkillBar skill="React Native" skillExpertise={55} color="bg-blue-400" />
 				<SkillBar skill="Next.js" skillExpertise={65} color="bg-blue-400" />
+				<SkillBar skill="Vue" skillExpertise={65} color="bg-blue-400" />
+				<SkillBar skill="Nuxt.js" skillExpertise={65} color="bg-blue-400" />
 				<SkillBar skill="Linux" skillExpertise={70} color="bg-blue-400" />
 				<SkillBar skill="Directus" skillExpertise={50} color="bg-blue-400" />
 			</div>
