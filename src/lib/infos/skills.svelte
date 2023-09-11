@@ -40,6 +40,7 @@
 			<div class="w-full">
 				<p class="font-semibold text-lg mt-4 dark:text-zinc-300">Tools</p>
 				<SkillBar skill="Git" skillExpertise={90} color="bg-indigo-500" />
+				<SkillBar skill="AWS" skillExpertise={65} color="bg-indigo-500" />
 				<SkillBar skill="VS Code" skillExpertise={80} color="bg-indigo-500" />
 				<SkillBar skill="Docker" skillExpertise={65} color="bg-indigo-500" />
 			</div>
