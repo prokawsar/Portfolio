@@ -38,6 +38,7 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@sentry/sveltekit": "^7.69.0",
 		"@sveltejs/adapter-vercel": "^2.4.1"
 	}
 }
