@@ -3,11 +3,11 @@
 </script>
 
 <div class="fixed sm:relative flex flex-col items-center w-full p-4 md:p-10 md:mx-20">
-	<p class="hidden sm:flex font-roboto font-light text-black dark:text-slate-400">
-		To open the menu, employ a right-click with your mouse
+	<p class="animate-bounce hidden lg:flex font-roboto font-light text-black dark:text-slate-400">
+		Right-click to open menu
 	</p>
-	<p class="sm:hidden dark:text-slate-400">Tap anywhere to open menu</p>
-	<div class="flex flex-col md:flex-row gap-2 md:gap-5 w-full">
+	<p class="lg:hidden dark:text-slate-400 animate-bounce">Tap anywhere to open menu</p>
+	<div class="flex flex-col lg:flex-row gap-2 md:gap-5 w-full">
 		<div class="flex flex-col justify-center gap-2 w-full">
 			<h1 class="text-6xl text-black dark:text-slate-100">Hi, <br /> I am Kawsar Ahmed</h1>
 			<h2 class="text-[26px] sm:text-3xl dark:text-slate-100">Software Engineer | Frontend</h2>
@@ -17,19 +17,21 @@
 				specially with Svelte, SvelteKit. I take pride in writing clean and optimized code, ensuring
 				that your applications perform at their best.
 			</p>
-			<div class="flex flex-row gap-2 mt-5">
+			<div class="flex flex-row gap-2 mt-5 flex-wrap">
 				<Capsule text="JavaScript" />
 				<Capsule text="Svelte" />
 				<Capsule text="SvelteKit" />
 				<Capsule text="Tailwind" />
 				<Capsule text="PHP" />
+				<Capsule text="Rest API" />
 			</div>
 			<div class="flex flex-row gap-2">
 				<Capsule text="Git" bg="bg-gray-300" textColor="!text-gray-600 dark:!text-gray-400" />
 				<Capsule text="Docker" bg="bg-gray-300" textColor="!text-gray-600 dark:!text-gray-400" />
+				<Capsule text="Learner" bg="bg-gray-300" textColor="!text-gray-600 dark:!text-gray-400" />
 			</div>
 		</div>
-		<div class="md:flex md:justify-center w-full hidden relative bg-hero-bg bg-no-repeat bg-cover">
+		<div class="lg:flex lg:justify-center w-full hidden relative bg-hero-bg bg-no-repeat bg-cover">
 			<img
 				class="left-2 md:left-0 scale-75 sm:scale-75 lg:scale-100"
 				src="/images/avatar.png"
@@ -37,7 +39,7 @@
 			/>
 		</div>
 
-		<div class="flex w-full relative md:hidden">
+		<div class="flex w-full relative lg:hidden">
 			<svg class="" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
 				<path
 					fill="#D0E2FF"
@@ -47,7 +49,7 @@
 			</svg>
 
 			<img
-				class="absolute left-2 md:left-32 md:top-24 scale-75 md:scale-100"
+				class="absolute left-2 md:left-0 md:top-18 scale-75"
 				src="/images/avatar.png"
 				alt="avatar"
 				height="100%"
