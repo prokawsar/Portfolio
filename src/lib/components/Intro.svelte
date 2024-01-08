@@ -49,7 +49,7 @@
 			</svg>
 
 			<img
-				class="absolute left-2 md:left-0 md:top-18 scale-75"
+				class="absolute left-2 md:left-0 md:top-18 scale-75 object-cover"
 				src="/images/avatar.png"
 				alt="avatar"
 				height="100%"
