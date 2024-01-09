@@ -8,12 +8,12 @@
 	</h1>
 
 	<Jobs
-		timeDuration="January 2022 - Present"
+		timeDuration="December 2021 - January 2024"
 		role="Frontend Engineer"
 		level="Middle+"
 		company="HireOnceAndForever - USA"
 		jobType="Fully Remote"
-		tech="Svelte, SvelteKit, Vue, Nuxt, TypeScript, Bootstrap 5, Tailwind"
+		tech="Svelte, SvelteKit, Vue, Nuxt, TypeScript, Bootstrap 5, Tailwind, Directus"
 		responsibility="I am working to convert a Blockchain banking system made up with asp.net to Svelte project.
 	I made numours standalone Svelte component to use accross the project. I used to work
 	with a team of 7 members. After proving excellent performance, responsibility increase
