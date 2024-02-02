@@ -10,19 +10,28 @@
 	<div class="flex flex-col lg:flex-row gap-2 md:gap-5 w-full">
 		<div class="flex flex-col justify-center gap-2 w-full">
 			<h1 class="text-6xl text-black dark:text-slate-100">Hi, <br /> I am Kawsar Ahmed</h1>
-			<h2 class="text-[26px] sm:text-3xl dark:text-slate-100">Software Engineer | Frontend</h2>
+			<h2 class="text-[26px] sm:text-3xl dark:text-slate-100 flex items-center gap-3">
+				Software Engineer | Frontend
+				<span class="outline outline-blue-500 px-5 py-1 rounded-full text-sm font-semibold"
+					>Available to hire</span
+				>
+			</h2>
 			<p class="text-gray-600 dark:text-gray-300 text-justify">
 				I'm delighted to have you here! As a dedicated Software Engineer specializing in frontend
 				development, my focus revolves around crafting top-notch web applications in any tech yet
-				specially with Svelte, SvelteKit. I take pride in writing clean and optimized code, ensuring
-				that your applications perform at their best.
+				specially with React, Next.js, Svelte, SvelteKit. I take pride in writing clean and
+				optimized code, ensuring that your applications perform at their best.
 			</p>
-			<div class="flex flex-row gap-2 mt-5 flex-wrap">
-				<Capsule text="JavaScript" />
+			<div class="flex flex-row gap-1 mt-5 flex-wrap">
+				<Capsule text="React" />
+				<Capsule text="Next.js" />
 				<Capsule text="Svelte" />
 				<Capsule text="SvelteKit" />
+				<Capsule text="JavaScript" />
+				<Capsule text="TypeScript" />
 				<Capsule text="Tailwind" />
-				<Capsule text="PHP" />
+				<Capsule text="Nodejs" />
+				<Capsule text="PostgreSQL" />
 				<Capsule text="Rest API" />
 			</div>
 			<div class="flex flex-row gap-2">

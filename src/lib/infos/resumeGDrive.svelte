@@ -12,7 +12,7 @@
 
 <iframe
 	class="h-[90vh]"
-	src="https://drive.google.com/file/d/1cRgdyI3_wZJAU6g_8XO4fHYJ4QF-SZpl/preview"
+	src="https://drive.google.com/file/d/1Is-jw20KspoaF6Wd3lD_sLcmQ1Mn8nAc/preview"
 	width="1140"
 	on:load={() => loadFinish()}
 	allow="autoplay"
