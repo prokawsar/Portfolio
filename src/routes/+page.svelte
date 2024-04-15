@@ -1,7 +1,4 @@
 <script lang="ts">
-	import Capsule from '$lib/components/Capsule.svelte'
-	import Fa from 'svelte-fa'
-	import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 	import ContextMenu from '$lib/components/ContextMenu.svelte'
 	import { goto } from '$app/navigation'
 	import { browser } from '$app/environment'
@@ -12,9 +9,11 @@
 	import ResumeGDrive from '$lib/infos/resumeGDrive.svelte'
 	import Intro from '$lib/components/Intro.svelte'
 	import MobileFooter from '$lib/components/MobileFooter.svelte'
+	import Showcase from '$lib/infos/showcase.svelte'
 
 	const infos = {
 		work: Work,
+		showcase: Showcase,
 		education: Education,
 		skills: Skills,
 		resumeGDrive: ResumeGDrive

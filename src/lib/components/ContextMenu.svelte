@@ -30,6 +30,13 @@ Known bug:
 			class: ''
 		},
 		{
+			name: 'showcase',
+			onClick: projectShowcase,
+			displayText: 'Project Showcase',
+			icon: 'fa-solid fa-diagram-project',
+			class: 'text-green-600'
+		},
+		{
 			name: 'education',
 			onClick: education,
 			displayText: 'Education',
@@ -60,13 +67,6 @@ Known bug:
 		{
 			name: 'hr'
 		},
-		// {
-		// 	name: 'resume',
-		// 	onClick: resumeLink,
-		// 	displayText: 'Resume',
-		// 	icon: 'fa-solid fa-file',
-		// 	class: ''
-		// },
 		{
 			name: 'resumeGoogle',
 			onClick: resumeGDrive,
@@ -171,8 +171,8 @@ Known bug:
 	function toggleTheme() {
 		dispatch('menuSelect', 'theme')
 	}
-	function resumeLink() {
-		dispatch('menuSelect', 'resume')
+	function projectShowcase() {
+		dispatch('menuSelect', 'showcase')
 	}
 
 	function resumeGDrive() {
@@ -208,7 +208,7 @@ Known bug:
 								on:mouseenter={() =>
 									item.name == 'profiles' ? (showProfiles = true) : (showProfiles = false)}
 								class:cursor-not-allowed={item.disabled}
-								><i class="{item.icon} dark:text-gray-400 px-3" />{item.displayText}</button
+								><i class="{item.icon} dark:text-gray-400 px-2" />{item.displayText}</button
 							>
 						</li>
 					{/if}
