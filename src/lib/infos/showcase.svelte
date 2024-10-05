@@ -3,6 +3,28 @@
 
 	const projects = [
 		{
+			title: 'Paper Cost',
+			description: 'A Mobile focused web app for calculating paper cost for carton factory.',
+			live: 'https://paper-cost.vercel.app/',
+			url: 'https://github.com/prokawsar/paper-cost',
+			techs: 'Svelte, SvelteKit, JavaScript, TypeScript, Tailwind, Supabase'
+		},
+		{
+			title: 'Paper Cost (React version)',
+			description: 'A Mobile focused web app for calculating paper cost for carton factory.',
+			live: 'https://paper-cost-react.vercel.app/',
+			url: 'https://github.com/prokawsar/paper-cost-react',
+			techs:
+				'React, React Router, React hook form, JavaScript, TypeScript, Antd, Tailwind, Supabase'
+		},
+		{
+			title: 'ARK-Website',
+			description: 'Langing page for ARK-builder organisation.',
+			live: 'https://ark-builders.github.io/website2/',
+			url: 'https://github.com/ARK-Builders/website2',
+			techs: 'Svelte, SvelteKit, TypeScript, Tailwind, Shadcn, Tauri'
+		},
+		{
 			title: 'ARK-Gallery',
 			description: 'An image gallery app for cross plaform',
 			// live: 'https://github.com/ARK-Builders/ARK-Gallery',
@@ -41,6 +63,13 @@
 			live: 'https://hyeon-petsafe.vercel.app/',
 			url: 'https://github.com/prokawsar/hyeon',
 			techs: 'Svelte, SvelteKit, TypeScript, Tailwind'
+		},
+		{
+			title: 'Todo Board',
+			description: 'A basic todo task management app.',
+			live: 'https://todo-board-react.vercel.app/',
+			url: 'https://github.com/prokawsar/todo-board-react',
+			techs: 'React, React Router, React hook form, JavaScript, TypeScript, Zod, Tailwind, Supabase'
 		}
 	]
 </script>
