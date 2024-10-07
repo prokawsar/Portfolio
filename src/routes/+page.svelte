@@ -10,8 +10,14 @@
 	import Intro from '$lib/components/Intro.svelte'
 	import MobileFooter from '$lib/components/MobileFooter.svelte'
 	import Showcase from '$lib/infos/showcase.svelte'
+	import { page } from '$app/stores'
+	import type { ComponentType } from 'svelte'
 
-	const infos = {
+	type InfoComponents = {
+		[key: string]: ComponentType
+	}
+
+	const infos: InfoComponents = {
 		work: Work,
 		showcase: Showcase,
 		education: Education,
@@ -39,6 +45,8 @@
 		}
 
 		if (Object.keys(infos).includes(e.detail)) {
+			$page.url.searchParams.set('section', e.detail)
+			goto(`?${$page.url.searchParams.toString()}`)
 			showInfo = true
 		}
 	}
@@ -68,6 +76,17 @@
 			document.documentElement.classList.remove('dark')
 			darkMode = false
 		}
+
+		const section = $page.url.searchParams.get('section')
+		if (section) {
+			activeComp = section
+			showInfo = true
+		}
+	}
+
+	const handleCloseSection = () => {
+		showInfo = false
+		goto('/')
 	}
 </script>
 
@@ -84,7 +103,7 @@
 	<ContextMenu on:menuSelect={(e) => handleMenuEvent(e)} />
 
 	{#if showInfo}
-		<Accordian on:close={() => (showInfo = false)} component={infos[activeComp]} />
+		<Accordian on:close={handleCloseSection} component={infos[activeComp]} />
 	{/if}
 
 	<MobileFooter />
