@@ -50,32 +50,22 @@
 			showInfo = true
 		}
 	}
+	function setTheme(isDark: boolean) {
+		darkMode = isDark
+		localStorage.setItem('theme', isDark ? 'dark' : 'light')
+		document.documentElement.classList.toggle('dark', isDark)
+		document.documentElement.classList.toggle('light', !isDark)
+	}
 
 	function handleSwitchDarkMode() {
-		darkMode = !darkMode
-
-		localStorage.setItem('theme', darkMode ? 'dark' : 'light')
-
-		if (darkMode) {
-			document.documentElement.classList.add('dark')
-			document.documentElement.classList.remove('light')
-		} else {
-			document.documentElement.classList.remove('dark')
-			document.documentElement.classList.add('light')
-		}
+		setTheme(!darkMode)
 	}
 
 	if (browser) {
-		if (
-			localStorage.theme === 'dark' ||
-			(!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
-		) {
-			document.documentElement.classList.add('dark')
-			darkMode = true
-		} else {
-			document.documentElement.classList.remove('dark')
-			darkMode = false
-		}
+		const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches
+		const storedTheme = localStorage.getItem('theme')
+		const isDark = storedTheme === 'dark' || (!storedTheme && prefersDark)
+		setTheme(isDark)
 
 		const section = $page.url.searchParams.get('section')
 		if (section) {
