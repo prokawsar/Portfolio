@@ -29,27 +29,29 @@
 		showInfo = false,
 		activeComp = ''
 
-	const handleMenuEvent = (e: any) => {
-		activeComp = e.detail
-		if (e.detail == 'theme') {
-			handleSwitchDarkMode()
-			return
-		}
-		if (e.detail == 'resume') {
-			goto('/resume')
-			return
-		}
-		if (e.detail == 'hire') {
-			window.open('https://www.upwork.com/freelancers/~012f78e5dacf069591', '_blank')
-			return
-		}
+	const handleMenuEvent = (e: { detail: string }) => {
+		const action = e.detail
+		activeComp = action
 
-		if (Object.keys(infos).includes(e.detail)) {
-			$page.url.searchParams.set('section', e.detail)
-			goto(`?${$page.url.searchParams.toString()}`)
-			showInfo = true
+		switch (action) {
+			case 'theme':
+				handleSwitchDarkMode()
+				break
+			case 'resume':
+				goto('/resume')
+				break
+			case 'hire':
+				window.open('https://www.upwork.com/freelancers/~012f78e5dacf069591', '_blank')
+				break
+			default:
+				if (action in infos) {
+					$page.url.searchParams.set('section', action)
+					goto(`?${$page.url.searchParams.toString()}`)
+					showInfo = true
+				}
 		}
 	}
+
 	function setTheme(isDark: boolean) {
 		darkMode = isDark
 		localStorage.setItem('theme', isDark ? 'dark' : 'light')
