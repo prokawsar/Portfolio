@@ -1,7 +1,6 @@
 <script>
-	import '../css/style.css'
-	import '../css/app.css'
+	import '$lib/css/style.css'
+	import '$lib/css/app.css'
 </script>
 
-<!-- <Navbar /> -->
 <slot />
