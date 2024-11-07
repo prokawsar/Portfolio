@@ -13,6 +13,6 @@ export async function load() {
 	}
 
 	return {
-		post: posts
+		posts: posts
 	};
 }

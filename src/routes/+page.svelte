@@ -16,6 +16,10 @@
 		<nav class="flex justify-between w-full">
 			<a href="/" class="text-2xl font-bold">Kawsar Ahmed</a>
 		</nav>
-		{@html data.post[0].title}
+		{#each data.posts as post}
+			<article class="prose prose-xl p-10">
+				{@html post.content}
+			</article>
+		{/each}
 	</div>
 </div>
