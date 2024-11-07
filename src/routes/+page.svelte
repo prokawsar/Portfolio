@@ -1,4 +1,6 @@
 <script lang="ts">
+	let { data } = $props();
+	console.log(data);
 </script>
 
 <svelte:head>
@@ -13,7 +15,7 @@
 	<div class="max-w-7xl w-full">
 		<nav class="flex justify-between w-full">
 			<a href="/" class="text-2xl font-bold">Kawsar Ahmed</a>
-			<div>tete</div>
 		</nav>
+		{@html data.post[0].title}
 	</div>
 </div>
