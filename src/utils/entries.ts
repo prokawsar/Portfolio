@@ -76,6 +76,12 @@ const parseMdFile = (rawContent: string) => {
 	}
 };
 
+/**
+ * Description
+ * @param {any} filepath:string
+ * @param {any} rawContent:string
+ * @returns {any}
+ */
 const getMetadata = (filepath: string, rawContent: string) => {
 	const { metadata, content } = parseMdFile(rawContent);
 
