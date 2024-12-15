@@ -1,16 +1,16 @@
 <script lang="ts">
-	import ContextMenu from '$lib/components/ContextMenu.svelte'
-	import { goto } from '$app/navigation'
 	import { browser } from '$app/environment'
+	import { goto } from '$app/navigation'
+	import { page } from '$app/stores'
 	import Accordian from '$lib/components/Accordian.svelte'
-	import Education from '$lib/infos/education.svelte'
-	import Work from '$lib/infos/work.svelte'
-	import Skills from '$lib/infos/skills.svelte'
-	import ResumeGDrive from '$lib/infos/resumeGDrive.svelte'
+	import ContextMenu from '$lib/components/ContextMenu.svelte'
 	import Intro from '$lib/components/Intro.svelte'
 	import MobileFooter from '$lib/components/MobileFooter.svelte'
+	import Education from '$lib/infos/education.svelte'
+	import ResumeGDrive from '$lib/infos/resumeGDrive.svelte'
 	import Showcase from '$lib/infos/showcase.svelte'
-	import { page } from '$app/stores'
+	import Skills from '$lib/infos/skills.svelte'
+	import Work from '$lib/infos/work.svelte'
 	import type { ComponentType } from 'svelte'
 
 	type InfoComponents = {

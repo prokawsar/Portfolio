@@ -1,8 +1,8 @@
 <script lang="ts">
-	import Fa from 'svelte-fa'
-	import { slide } from 'svelte/transition'
 	import { faMultiply } from '@fortawesome/free-solid-svg-icons'
 	import { SvelteComponent, createEventDispatcher } from 'svelte'
+	import Fa from 'svelte-fa'
+	import { slide } from 'svelte/transition'
 
 	export let component: typeof SvelteComponent,
 		bodyClass = ''
@@ -20,7 +20,7 @@
 		>
 			<Fa icon={faMultiply} size="1.3x" class="dark:text-white" />
 		</button>
-		<div class="flex flex-col items-center  {bodyClass}">
+		<div class="flex flex-col items-center {bodyClass}">
 			<svelte:component this={component} />
 		</div>
 	</div>
