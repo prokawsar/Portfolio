@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-	content: ['./src/app.html', './src/**/*.{svelte,js,ts}'],
+	content: ['./src/app.html', './content/**', './src/**/*.{svelte,js,ts}'],
 	darkMode: 'class',
 	theme: {
 		extend: {
@@ -15,5 +15,5 @@ module.exports = {
 			roboto: ['Roboto', 'sans-serif']
 		}
 	},
-	plugins: []
+	plugins: [require('@tailwindcss/typography')]
 }

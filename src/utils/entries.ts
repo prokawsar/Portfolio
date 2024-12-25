@@ -102,10 +102,6 @@ const getMetadata = (filepath: string, rawContent: string) => {
 
 		tag: metadata?.type?.split(' ').shift().toLowerCase() || null,
 		tags: metadata?.tags || []
-
-		// whether or not this file is `my-post.md` or `my-post/index.md`
-		// (needed to do correct dynamic import in posts/[slug].svelte)
-		// isIndexFile: filepath.endsWith('/index.md')
 	};
 };
 
@@ -133,11 +129,11 @@ interface Tag {
 
 export const getTags = async () => {
 	const posts = (await getEntries('posts')) as Blog[];
-	let tags = posts
+	const tags = posts
 		.flatMap(({ tags }) => tags)
 		.map((tag) => ({ text: tag, slug: slug(tag) }))
 		.reduce((arr: Tag[], tag) => {
-			let index = arr.findIndex((t) => t.slug === tag.slug);
+			const index = arr.findIndex((t) => t.slug === tag.slug);
 			if (index > -1) arr[index].count++;
 			else arr.push({ text: tag.text, slug: tag.slug, count: 1 });
 			return arr;
