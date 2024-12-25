@@ -1,15 +1,23 @@
 <script lang="ts">
-	export let classes = ''
+	interface Props {
+		classes?: string;
+	}
+
+	let { classes = '' }: Props = $props();
 </script>
 
-<div class="custom-loader {classes}" />
+<div class="custom-loader {classes}"></div>
 
 <style>
 	.custom-loader {
 		width: 50px;
 		height: 50px;
 		--c: radial-gradient(farthest-side, #766df4 92%, #0000);
-		background: var(--c) 50% 0, var(--c) 50% 100%, var(--c) 100% 50%, var(--c) 0 50%;
+		background:
+			var(--c) 50% 0,
+			var(--c) 50% 100%,
+			var(--c) 100% 50%,
+			var(--c) 0 50%;
 		background-size: 12px 12px;
 		background-repeat: no-repeat;
 		animation: s7 1s infinite;

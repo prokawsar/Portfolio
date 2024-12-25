@@ -1,4 +1,6 @@
 <script>
+	import { stopPropagation } from 'svelte/legacy';
+
 	const menuItems = [
 		{
 			name: 'github',
@@ -29,7 +31,7 @@
 			url: 'https://stackoverflow.com/users/4826019/prokawsar',
 			disabled: false
 		}
-	]
+	];
 </script>
 
 <div
@@ -38,12 +40,13 @@
 	{#each menuItems as menu}
 		<button
 			type="button"
-			on:click|stopPropagation={() => {
-				menu.url ? window.open(menu.url, '_blank') : ''
+			onclick={(e) => {
+				e.stopPropagation();
+				menu.url ? window.open(menu.url, '_blank') : '';
 			}}
 			class="dark:text-slate-400 flex flex-col justify-center items-center"
 		>
-			<i class="{menu.icon} dark:text-gray-400 px-3" />
+			<i class="{menu.icon} dark:text-gray-400 px-3"></i>
 			{menu.displayText}
 		</button>
 	{/each}

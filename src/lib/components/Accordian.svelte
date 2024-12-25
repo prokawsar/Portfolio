@@ -1,12 +1,10 @@
 <script lang="ts">
-	import Fa from 'svelte-fa'
-	import { slide } from 'svelte/transition'
-	import { faMultiply } from '@fortawesome/free-solid-svg-icons'
-	import { SvelteComponent, createEventDispatcher } from 'svelte'
+	import { slide } from 'svelte/transition';
+	import { SvelteComponent, createEventDispatcher } from 'svelte';
 
 	export let component: typeof SvelteComponent,
-		bodyClass = ''
-	const dispatch = createEventDispatcher()
+		bodyClass = '';
+	const dispatch = createEventDispatcher();
 </script>
 
 <div
@@ -18,9 +16,9 @@
 			class="absolute right-1 hover:bg-slate-50 dark:hover:bg-slate-700 rounded-full p-1 px-[6px] flex items-center justify-center"
 			on:click={() => dispatch('close')}
 		>
-			<Fa icon={faMultiply} size="1.3x" class="dark:text-white" />
+			Close
 		</button>
-		<div class="flex flex-col items-center  {bodyClass}">
+		<div class="flex flex-col items-center {bodyClass}">
 			<svelte:component this={component} />
 		</div>
 	</div>

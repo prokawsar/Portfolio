@@ -1,11 +1,23 @@
 <script lang="ts">
-	export let timeDuration: string,
-		role: string,
+	interface Props {
+		timeDuration: string;
+		role: string;
+		level?: string;
+		jobType?: string;
+		company?: string;
+		tech?: string;
+		responsibility?: string;
+	}
+
+	let {
+		timeDuration,
+		role,
 		level = 'Middle',
 		jobType = '',
 		company = '',
 		tech = '',
 		responsibility = ''
+	}: Props = $props();
 </script>
 
 <div class="text-blue-500 font-semibold mt-5 text-lg">{timeDuration}</div>

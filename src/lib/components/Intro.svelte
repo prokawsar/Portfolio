@@ -1,5 +1,5 @@
 <script>
-	import Capsule from '$lib/components/Capsule.svelte'
+	import Capsule from '$lib/components/Capsule.svelte';
 </script>
 
 <div class="fixed sm:relative flex flex-col items-center w-full p-4 md:p-10 md:mx-20">

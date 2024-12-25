@@ -1,8 +1,12 @@
-<script>
-	export let text = '',
-		bg = '',
-		textColor = '',
-		sizeStyle = 'px-2 py-1'
+<script lang="ts">
+	interface Props {
+		text?: string;
+		bg?: string;
+		textColor?: string;
+		sizeStyle?: string;
+	}
+
+	let { text = '', bg = '', textColor = '', sizeStyle = 'px-2 py-1' }: Props = $props();
 </script>
 
 <div

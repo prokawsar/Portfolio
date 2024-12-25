@@ -1,13 +1,17 @@
 <script lang="ts">
-	import Capsule from '$lib/components/Capsule.svelte'
+	import Capsule from '$lib/components/Capsule.svelte';
 
-	export let project: {
-		title: string
-		description: string
-		live?: string
-		url?: string
-		techs: string
+	interface Props {
+		project: {
+			title: string;
+			description: string;
+			techs: string;
+			live?: string;
+			url?: string;
+		};
 	}
+
+	let { project }: Props = $props();
 </script>
 
 <div
@@ -18,14 +22,14 @@
 	<div class="flex flex-row justify-center w-full items-center gap-2">
 		<button
 			class:hidden={!project.live}
-			on:click={() => window.open(project.live, '_blank')}
+			onclick={() => window.open(project.live, '_blank')}
 			class="px-5 border rounded hover:border-gray-500"
 		>
 			Live
 		</button>
 		<button
 			class:hidden={!project.url}
-			on:click={() => window.open(project.url, '_blank')}
+			onclick={() => window.open(project.url, '_blank')}
 			class="px-5 border rounded hover:border-gray-500"
 		>
 			Code
